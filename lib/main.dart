@@ -1,3 +1,4 @@
+import 'package:amb_app/views/LoginPage_options.dart';
 import 'package:amb_app/views/home_view.dart';
 import 'package:amb_app/views/login_view.dart';
 import 'package:amb_app/views/register_View.dart';
@@ -12,7 +13,7 @@ void main() {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomePage(),
+      home: const LoginOptions(),
     ),
   );
 }
