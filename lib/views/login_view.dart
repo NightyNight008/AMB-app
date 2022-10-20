@@ -12,6 +12,11 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          'Login',
+        ),
+      ),
       backgroundColor: Colors.grey[300],
       body: SafeArea(
         child: Center(
@@ -82,7 +87,7 @@ class _LoginPageState extends State<LoginPage> {
                   Navigator.of(context)
                       .pushNamedAndRemoveUntil(login2Route, (route) => false);
                 },
-                child: const Text("Not registered?"),
+                child: const Text("Login"),
               ),
 
               //*************************************Login Button******************************
