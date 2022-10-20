@@ -11,9 +11,9 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color.fromARGB(255, 247, 224, 232),
-        body: SafeArea(
-            child: Center(
+      backgroundColor: Color.fromARGB(255, 247, 224, 232),
+      body: SafeArea(
+        child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -58,8 +58,11 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ),
+              const SizedBox(
+                height: 10,
+              ),
               Padding(
-                padding: const EdgeInsets.only(top: 300, left: 500),
+                padding: const EdgeInsets.only(left: 300, top: 300),
                 child: Container(
                   padding: const EdgeInsets.all(18.0),
                   decoration: BoxDecoration(
@@ -77,9 +80,11 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ),
-              )
+              ),
             ],
           ),
-        )));
+        ),
+      ),
+    );
   }
 }

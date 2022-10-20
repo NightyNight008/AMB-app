@@ -1,3 +1,5 @@
+import 'dart:js';
+
 import 'package:amb_app/views/LoginPage_options.dart';
 import 'package:amb_app/views/home_view.dart';
 import 'package:amb_app/views/login_view.dart';
@@ -9,11 +11,19 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(
     MaterialApp(
+      // initialRoute: '/Homepage/',
+      debugShowCheckedModeBanner: false,
       title: 'Amb App',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const LoginOptions(),
+      home: HomePage(),
+      routes: {
+        '/login/': (context) => const LoginPage(),
+        '/register/': (context) => const RegisterPage(),
+        '/login2/': (context) => const LoginOptions(),
+        '/Homepage/': (context) => HomePage(),
+      },
     ),
   );
 }
