@@ -1,4 +1,6 @@
+import 'package:amb_app/views/home_view.dart';
 import 'package:amb_app/views/login_view.dart';
+import 'package:amb_app/views/register_View.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,16 +12,7 @@ void main() {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const LoginPage(),
+      home: HomePage(),
     ),
   );
-}
-
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container();
-  }
 }
