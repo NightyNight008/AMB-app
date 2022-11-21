@@ -16,6 +16,14 @@ class _LoginPageState extends State<LoginPage> {
         title: const Text(
           'Login',
         ),
+        automaticallyImplyLeading: true,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back_ios),
+          onPressed: () {
+            Navigator.of(context)
+                .pushNamedAndRemoveUntil(homepageRoute, (route) => false);
+          },
+        ),
       ),
       backgroundColor: Colors.grey[300],
       body: SafeArea(
@@ -81,7 +89,7 @@ class _LoginPageState extends State<LoginPage> {
               const SizedBox(
                 height: 10,
               ),
-
+              //************************Login button************************************************** */
               TextButton(
                 onPressed: () {
                   Navigator.of(context)
@@ -89,51 +97,39 @@ class _LoginPageState extends State<LoginPage> {
                 },
                 child: const Text("Login"),
               ),
-
-              //*************************************Login Button******************************
-              // Padding(
-              //   padding: const EdgeInsets.symmetric(horizontal: 25.0),
-              //   child: Container(
-              //     padding: const EdgeInsets.all(12.0),
-              //     decoration: BoxDecoration(
-              //       color: Colors.deepPurple,
-              //       borderRadius: BorderRadius.circular(12),
-              //     ),
-              //     child: const Center(
-              //       child: Text(
-              //         "Login",
-              //         style: TextStyle(
-              //           color: Colors.white,
-              //           fontWeight: FontWeight.bold,
-              //           fontSize: 18,
-              //         ),
-              //       ),
-              //     ),
-              //   ),
-              // ),
+              /**************************************************************************************/
               const SizedBox(
                 height: 10,
               ),
 
               //*********************not a member************************************************/
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
-                  Text(
-                    "Not Registered?",
-                    style: TextStyle(
-                      color: Colors.black,
-                    ),
-                  ),
-                  Text(
-                    " Register Now",
-                    style: TextStyle(
-                      color: Colors.blue,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  )
-                ],
+              const Text("Not Registered?"),
+              TextButton(
+                onPressed: () {
+                  Navigator.of(context)
+                      .pushNamedAndRemoveUntil(registerRoute, (route) => false);
+                },
+                child: const Text("Register Here"),
               ),
+
+              // Row(
+              //   mainAxisAlignment: MainAxisAlignment.center,
+              //   children: const [
+              //     Text(
+              //       "Not Registered?",
+              //       style: TextStyle(
+              //         color: Colors.black,
+              //       ),
+              //     ),
+              //     TextButton(
+              //   onPressed: () {
+              //     Navigator.of(context)
+              //         .pushNamedAndRemoveUntil(login2Route, (route) => false);
+              //   },
+              //   child:  Text("Login"),
+              // ),
+              //   ],
+              // ),
             ],
           ),
         ),

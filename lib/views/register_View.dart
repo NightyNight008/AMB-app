@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 
+import '../constant/routes.dart';
+
 class RegisterPage extends StatefulWidget {
   const RegisterPage({Key? key}) : super(key: key);
 
@@ -10,9 +12,22 @@ class RegisterPage extends StatefulWidget {
 }
 
 class _RegisterPageState extends State<RegisterPage> {
+  late final TextEditingController _email;
+  late final TextEditingController _password;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Register'),
+        automaticallyImplyLeading: true,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back_ios),
+          onPressed: () {
+            Navigator.of(context)
+                .pushNamedAndRemoveUntil(homepageRoute, (route) => false);
+          },
+        ),
+      ),
       backgroundColor: Colors.grey[300],
       body: SafeArea(
         child: Center(
@@ -77,49 +92,31 @@ class _RegisterPageState extends State<RegisterPage> {
               const SizedBox(
                 height: 10,
               ),
-              //*************************************Login Button******************************
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                child: Container(
-                  padding: const EdgeInsets.all(12.0),
-                  decoration: BoxDecoration(
-                    color: Colors.deepPurple,
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  child: const Center(
-                    child: Text(
-                      "Login",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 18,
-                      ),
-                    ),
-                  ),
-                ),
+              /******************************************/
+              TextButton(
+                onPressed: () {
+                  Navigator.of(context)
+                      .pushNamedAndRemoveUntil(loginRoute, (route) => false);
+                },
+                child: const Text("Register"),
               ),
               const SizedBox(
                 height: 10,
               ),
+              /*********************************************/
+              const Text('Already Registered ?'),
+              TextButton(
+                onPressed: () async {},
+                child: const Text("Login Here"),
+              ),
+              //*************************************Register Button******************************
 
-              //*********************not a member************************************************/
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
-                  Text(
-                    "Already Registered?",
-                    style: TextStyle(
-                      color: Colors.black,
-                    ),
-                  ),
-                  Text(
-                    " Login Now",
-                    style: TextStyle(
-                      color: Colors.blue,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  )
-                ],
+              TextButton(
+                onPressed: () {
+                  Navigator.of(context)
+                      .pushNamedAndRemoveUntil(registerRoute, (route) => false);
+                },
+                child: const Text("Click Here to register as a driver"),
               ),
             ],
           ),
