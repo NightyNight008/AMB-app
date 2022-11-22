@@ -1,5 +1,4 @@
 import 'package:amb_app/constant/routes.dart';
-import 'package:amb_app/views/ProfilePage.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {

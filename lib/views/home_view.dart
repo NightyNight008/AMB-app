@@ -34,7 +34,7 @@ class _HomePageState extends State<HomePage> {
                   backgroundColor: Color.fromARGB(255, 0, 255, 26),
                   foregroundColor: Colors.white,
                   padding:
-                      const EdgeInsets.symmetric(horizontal: 150, vertical: 20),
+                      const EdgeInsets.symmetric(horizontal: 100, vertical: 20),
                 ),
               ),
               const SizedBox(
@@ -51,7 +51,7 @@ class _HomePageState extends State<HomePage> {
                   backgroundColor: Color.fromARGB(255, 255, 0, 0),
                   foregroundColor: Colors.white,
                   padding:
-                      const EdgeInsets.symmetric(horizontal: 100, vertical: 20),
+                      const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
                 ),
               ),
 
