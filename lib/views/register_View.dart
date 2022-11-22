@@ -12,8 +12,25 @@ class RegisterPage extends StatefulWidget {
 }
 
 class _RegisterPageState extends State<RegisterPage> {
+  //late means value will be assigned later
   late final TextEditingController _email;
   late final TextEditingController _password;
+
+  @override
+  void initState() {
+    _email = TextEditingController();
+    _password = TextEditingController();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _email.dispose();
+    _password.dispose();
+    // TODO: implement dispose
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -106,7 +123,10 @@ class _RegisterPageState extends State<RegisterPage> {
               /*********************************************/
               const Text('Already Registered ?'),
               TextButton(
-                onPressed: () async {},
+                onPressed: () {
+                  Navigator.of(context)
+                      .pushNamedAndRemoveUntil(login2Route, (route) => false);
+                },
                 child: const Text("Login Here"),
               ),
               //*************************************Register Button******************************

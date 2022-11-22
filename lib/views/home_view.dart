@@ -13,12 +13,16 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 253, 252, 253),
+      backgroundColor: const Color.fromARGB(255, 253, 252, 253),
       body: SafeArea(
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              const Text("Press the buttons as per your need"),
+              const SizedBox(
+                height: 25,
+              ),
               // *******************************************************Emergency button
               TextButton(
                 onPressed: () {

@@ -1,4 +1,5 @@
 import 'package:amb_app/constant/routes.dart';
+import 'package:amb_app/views/ProfilePage.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -92,8 +93,8 @@ class _LoginPageState extends State<LoginPage> {
               //************************Login button************************************************** */
               TextButton(
                 onPressed: () {
-                  Navigator.of(context)
-                      .pushNamedAndRemoveUntil(login2Route, (route) => false);
+                  Navigator.of(context).pushNamedAndRemoveUntil(
+                      profilepageroute, (route) => false);
                 },
                 child: const Text("Login"),
               ),
