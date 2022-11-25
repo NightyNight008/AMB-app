@@ -89,7 +89,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 ),
               ),
               const SizedBox(
-                height: 10,
+                height: 5,
               ),
               //***************************password text field**************************************
               Padding(
@@ -116,18 +116,30 @@ class _RegisterPageState extends State<RegisterPage> {
                       .pushNamedAndRemoveUntil(loginRoute, (route) => false);
                 },
                 child: const Text("Register"),
+                style: TextButton.styleFrom(
+                  backgroundColor: Colors.blue,
+                  foregroundColor: Colors.white,
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 80, vertical: 22),
+                ),
               ),
               const SizedBox(
                 height: 10,
               ),
               /*********************************************/
-              const Text('Already Registered ?'),
-              TextButton(
-                onPressed: () {
-                  Navigator.of(context)
-                      .pushNamedAndRemoveUntil(login2Route, (route) => false);
-                },
-                child: const Text("Login Here"),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text('Already Registered ?'),
+                  TextButton(
+                    onPressed: () {
+                      Navigator.of(context).pushNamedAndRemoveUntil(
+                          login2Route, (route) => false);
+                    },
+                    child: const Text("Login Here"),
+                  ),
+                ],
               ),
               //*************************************Register Button******************************
 

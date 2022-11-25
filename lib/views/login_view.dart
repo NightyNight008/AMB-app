@@ -12,6 +12,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         title: const Text(
           'Login',
@@ -40,9 +41,7 @@ class _LoginPageState extends State<LoginPage> {
                   fontSize: 24,
                 ),
               ),
-              const SizedBox(
-                height: 24,
-              ),
+
               //********************************************************************* */
               const Text(
                 "Welcome Back",
@@ -52,7 +51,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
               const SizedBox(
-                height: 30,
+                height: 3,
               ),
               //***************************email textfield*****************************
               Padding(
@@ -69,7 +68,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
               const SizedBox(
-                height: 10,
+                height: 5,
               ),
               //***************************password text field**************************************
               Padding(
@@ -96,20 +95,32 @@ class _LoginPageState extends State<LoginPage> {
                       profilepageroute, (route) => false);
                 },
                 child: const Text("Login"),
+                style: TextButton.styleFrom(
+                  backgroundColor: Colors.blue,
+                  foregroundColor: Colors.white,
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 80, vertical: 22),
+                ),
               ),
-              /**************************************************************************************/
               const SizedBox(
                 height: 10,
               ),
+              /**************************************************************************************/
 
               //*********************not a member************************************************/
-              const Text("Not Registered?"),
-              TextButton(
-                onPressed: () {
-                  Navigator.of(context)
-                      .pushNamedAndRemoveUntil(registerRoute, (route) => false);
-                },
-                child: const Text("Register Here"),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text("Not Registered?"),
+                  TextButton(
+                    onPressed: () {
+                      Navigator.of(context).pushNamedAndRemoveUntil(
+                          registerRoute, (route) => false);
+                    },
+                    child: const Text("Register Here"),
+                  ),
+                ],
               ),
 
               // Row(
