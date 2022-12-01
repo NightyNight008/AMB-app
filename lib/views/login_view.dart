@@ -1,4 +1,5 @@
 import 'package:amb_app/constant/routes.dart';
+import 'package:amb_app/views/lib/custom%20widgets/pressable_buttons.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -89,18 +90,14 @@ class _LoginPageState extends State<LoginPage> {
                 height: 10,
               ),
               //************************Login button************************************************** */
-              TextButton(
-                onPressed: () {
-                  Navigator.of(context).pushNamedAndRemoveUntil(
-                      profilepageroute, (route) => false);
+              Pressable_Button(
+                onTap: () {
+                  Navigator.of(context)
+                      .pushNamedAndRemoveUntil(loginRoute, (route) => false);
                 },
-                child: const Text("Login"),
-                style: TextButton.styleFrom(
-                  backgroundColor: Colors.blue,
-                  foregroundColor: Colors.white,
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 80, vertical: 22),
-                ),
+                buttontext: 'Login',
+                verticallength: 22,
+                horizontalLength: 80,
               ),
               const SizedBox(
                 height: 10,
@@ -122,25 +119,6 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ],
               ),
-
-              // Row(
-              //   mainAxisAlignment: MainAxisAlignment.center,
-              //   children: const [
-              //     Text(
-              //       "Not Registered?",
-              //       style: TextStyle(
-              //         color: Colors.black,
-              //       ),
-              //     ),
-              //     TextButton(
-              //   onPressed: () {
-              //     Navigator.of(context)
-              //         .pushNamedAndRemoveUntil(login2Route, (route) => false);
-              //   },
-              //   child:  Text("Login"),
-              // ),
-              //   ],
-              // ),
             ],
           ),
         ),

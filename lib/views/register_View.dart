@@ -1,5 +1,6 @@
 // ignore_for_file: file_names
 
+import 'package:amb_app/views/lib/custom%20widgets/pressable_buttons.dart';
 import 'package:flutter/material.dart';
 
 import '../constant/routes.dart';
@@ -27,7 +28,6 @@ class _RegisterPageState extends State<RegisterPage> {
   void dispose() {
     _email.dispose();
     _password.dispose();
-    // TODO: implement dispose
     super.dispose();
   }
 
@@ -110,18 +110,14 @@ class _RegisterPageState extends State<RegisterPage> {
                 height: 10,
               ),
               /******************************************/
-              TextButton(
-                onPressed: () {
+              Pressable_Button(
+                onTap: () {
                   Navigator.of(context)
                       .pushNamedAndRemoveUntil(loginRoute, (route) => false);
                 },
-                child: const Text("Register"),
-                style: TextButton.styleFrom(
-                  backgroundColor: Colors.blue,
-                  foregroundColor: Colors.white,
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 80, vertical: 22),
-                ),
+                buttontext: 'Register',
+                horizontalLength: 80,
+                verticallength: 22,
               ),
               const SizedBox(
                 height: 10,

@@ -3,3 +3,4 @@ const registerRoute = '/register/';
 const login2Route = '/login2/';
 const homepageRoute = '/homepage/';
 const profilepageroute = '/profilepage/';
+const testpageroute = '/testpage';

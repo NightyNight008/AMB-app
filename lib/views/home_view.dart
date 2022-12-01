@@ -1,3 +1,4 @@
+import 'package:amb_app/views/lib/custom%20widgets/pressable_buttons.dart';
 import 'package:flutter/material.dart';
 
 import '../constant/routes.dart';
@@ -24,35 +25,22 @@ class _HomePageState extends State<HomePage> {
                 height: 25,
               ),
               // *******************************************************Emergency button
-              TextButton(
-                onPressed: () {
-                  Navigator.of(context)
-                      .pushNamedAndRemoveUntil(loginRoute, (route) => false);
-                },
-                child: const Text("Emergency"),
-                style: TextButton.styleFrom(
-                  backgroundColor: Color.fromARGB(255, 0, 255, 26),
-                  foregroundColor: Colors.white,
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 100, vertical: 20),
-                ),
+
+              Pressable_Button(
+                onTap: () {},
+                buttontext: 'Emergency',
+                buttonbackgroundcolor: const Color.fromARGB(255, 0, 255, 26),
+                horizontalLength: 100,
               ),
               const SizedBox(
                 height: 25,
               ),
               //*************************************************Life threatening  */
-              TextButton(
-                onPressed: () {
-                  Navigator.of(context)
-                      .pushNamedAndRemoveUntil(loginRoute, (route) => false);
-                },
-                child: const Text("Life Threatening emergency"),
-                style: TextButton.styleFrom(
-                  backgroundColor: Color.fromARGB(255, 255, 0, 0),
-                  foregroundColor: Colors.white,
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
-                ),
+
+              Pressable_Button(
+                onTap: () {},
+                buttontext: 'Life Threatening Emergency',
+                buttonbackgroundcolor: const Color.fromARGB(255, 255, 0, 0),
               ),
 
               //*****************************************************/
@@ -64,39 +52,38 @@ class _HomePageState extends State<HomePage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  TextButton(
-                    onPressed: () {
+                  Pressable_Button(
+                    onTap: () {
                       Navigator.of(context).pushNamedAndRemoveUntil(
                           login2Route, (route) => false);
                     },
-                    child: const Text("Login"),
-                    style: TextButton.styleFrom(
-                      backgroundColor: Colors.blue,
-                      foregroundColor: Colors.white,
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 50, vertical: 20),
-                    ),
+                    buttontext: 'Login',
+                    horizontalLength: 30,
                   ),
+
                   const SizedBox(
-                    width: 5,
+                    width: 10,
                   ),
                   //****************************8Register Button */
-                  TextButton(
-                    onPressed: () {
+                  Pressable_Button(
+                    onTap: () {
                       Navigator.of(context).pushNamedAndRemoveUntil(
                           registerRoute, (route) => false);
                     },
-                    child: const Text("Register"),
-                    style: TextButton.styleFrom(
-                      backgroundColor: Colors.blue,
-                      foregroundColor: Colors.white,
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 50, vertical: 20),
-                    ),
+                    buttontext: 'Register',
+                    horizontalLength: 30,
                   ),
+
                   //**********************************************************************/
                 ],
               ),
+              //****************************Delete this */
+              // Pressable_Button(
+              //     onTap: () {
+              //       Navigator.of(context).pushNamedAndRemoveUntil(
+              //           testpageroute, (route) => false);
+              //     },
+              //     buttontext: "Test"),
             ],
           ),
         ),
@@ -104,100 +91,3 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-//*****************************************************************
-//*****************************************************************
-    //  *******************************************************
-              // const SizedBox(
-              //   height: 10,
-              // ),
-              // ***************************************************************************
-
-//*************************************************************************************** */
-              // Column(
-              //   mainAxisAlignment: MainAxisAlignment.end,
-              //   children: [
-              //     TextButton(
-              //       onPressed: () {
-              //         Navigator.of(context).pushNamedAndRemoveUntil(
-              //             login2Route, (route) => false);
-              //       },
-              //       child: Container(
-              //         padding: const EdgeInsets.all(18.0),
-              //         decoration: const BoxDecoration(
-              //           shape: BoxShape.circle,
-              //           color: Colors.blue,
-              //         ),
-              //         child: const Center(
-              //           child: Text(
-              //             "Login",
-              //             style: TextStyle(
-              //               color: Colors.white,
-              //               fontWeight: FontWeight.bold,
-              //               fontSize: 18,
-              //             ),
-              //           ),
-              //         ),
-              //       ),
-              //     ),
-              //   ],
-              // ),
-              //********************************************************************************** */
-      
-      // floatingActionButton: FabCircularMenu(
-      //   fabOpenColor: const Color.fromARGB(255, 59, 255, 216),
-      //   fabCloseColor: Colors.white,
-      //   ringColor: const Color.fromARGB(255, 59, 206, 255),
-      //   alignment: Alignment.bottomCenter,
-      //   ringDiameter: 300,
-      //   children: [
-      //     // InkWell(
-      //     //     child: const Text(    can also use icons instead
-      //     //       'Register',
-      //     //       style: TextStyle(
-      //     //           color: Colors.blue,
-      //     //           fontWeight: FontWeight.bold,
-      //     //           fontSize: 18),
-      //     //     ),
-      //     InkWell(
-      //         child: const Text(
-      //           'Register',
-      //           style: TextStyle(
-      //               color: Colors.blue,
-      //               fontWeight: FontWeight.bold,
-      //               fontSize: 18),
-      //         ),
-      //         onTap: () {
-      //           Navigator.of(context).pushReplacement(
-      //             MaterialPageRoute(
-      //               builder: (BuildContext context) => const RegisterPage(),
-      //             ),
-      //           );
-      //         }),
-      //     InkWell(
-      //         child: const Text(
-      //           'Login',
-      //           style: TextStyle(
-      //               color: Colors.blue,
-      //               fontWeight: FontWeight.bold,
-      //               fontSize: 18),
-      //         ),
-      //         onTap: () {
-      //           Navigator.of(context).pushReplacement(
-      //             MaterialPageRoute(
-      //               builder: (BuildContext context) => const LoginPage(),
-      //             ),
-      //           );
-      //         }),
-      //   ],
-      // ),
-

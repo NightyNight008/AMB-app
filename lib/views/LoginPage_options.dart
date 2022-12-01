@@ -1,6 +1,7 @@
 // ignore_for_file: file_names
 
 import 'package:amb_app/constant/routes.dart';
+import 'package:amb_app/views/lib/custom%20widgets/pressable_buttons.dart';
 import 'package:flutter/material.dart';
 
 class LoginOptions extends StatefulWidget {
@@ -25,42 +26,32 @@ class _LoginOptionsState extends State<LoginOptions> {
           },
         ),
       ),
-      backgroundColor: Color.fromARGB(255, 252, 252, 252),
+      backgroundColor: const Color.fromARGB(255, 252, 252, 252),
       body: SafeArea(
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               //**************************Login as customer */
-              TextButton(
-                onPressed: () {
-                  Navigator.of(context)
-                      .pushNamedAndRemoveUntil(loginRoute, (route) => false);
-                },
-                child: const Text("Login As Customer"),
-                style: TextButton.styleFrom(
-                  backgroundColor: Colors.blue,
-                  foregroundColor: Colors.white,
-                  padding: const EdgeInsets.all(30),
-                ),
-              ),
+
+              Pressable_Button(
+                  onTap: () {
+                    Navigator.of(context)
+                        .pushNamedAndRemoveUntil(loginRoute, (route) => false);
+                  },
+                  buttontext: 'Login As Customer'),
               const SizedBox(
                 height: 25,
               ),
-              TextButton(
-                onPressed: () {
+//********************************Login as driver */
+              Pressable_Button(
+                onTap: () {
                   Navigator.of(context)
                       .pushNamedAndRemoveUntil(loginRoute, (route) => false);
                 },
-                child: const Text("Login As Driver"),
-                style: TextButton.styleFrom(
-                  backgroundColor: Colors.blue,
-                  foregroundColor: Colors.white,
-                  padding: const EdgeInsets.all(30),
-                ),
+                buttontext: 'Login As Driver',
+                horizontalLength: 65,
               ),
-
-              //*********************login as driver */
             ],
           ),
         ),
