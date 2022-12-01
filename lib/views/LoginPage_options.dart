@@ -1,7 +1,7 @@
 // ignore_for_file: file_names
 
 import 'package:amb_app/constant/routes.dart';
-import 'package:amb_app/views/lib/custom%20widgets/pressable_buttons.dart';
+import 'package:amb_app/custom%20widgets/pressable_buttons.dart';
 import 'package:flutter/material.dart';
 
 class LoginOptions extends StatefulWidget {
