@@ -4,19 +4,19 @@ import 'package:amb_app/constant/routes.dart';
 import 'package:amb_app/custom%20widgets/pressable_buttons.dart';
 import 'package:flutter/material.dart';
 
-class LoginOptions extends StatefulWidget {
-  const LoginOptions({Key? key}) : super(key: key);
+class RegisterOptions extends StatefulWidget {
+  const RegisterOptions({Key? key}) : super(key: key);
 
   @override
-  State<LoginOptions> createState() => _LoginOptionsState();
+  State<RegisterOptions> createState() => _RegisterOptionsState();
 }
 
-class _LoginOptionsState extends State<LoginOptions> {
+class _RegisterOptionsState extends State<RegisterOptions> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Login'),
+        title: const Text('Register'),
         automaticallyImplyLeading: true,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios),
@@ -39,7 +39,7 @@ class _LoginOptionsState extends State<LoginOptions> {
                     Navigator.of(context)
                         .pushNamedAndRemoveUntil(loginRoute, (route) => false);
                   },
-                  buttontext: 'Login As Customer'),
+                  buttontext: 'Register As Customer'),
               const SizedBox(
                 height: 25,
               ),
@@ -49,7 +49,7 @@ class _LoginOptionsState extends State<LoginOptions> {
                   Navigator.of(context)
                       .pushNamedAndRemoveUntil(loginRoute, (route) => false);
                 },
-                buttontext: 'Login As Driver',
+                buttontext: 'Register As Driver',
                 horizontalLength: 65,
               ),
             ],

@@ -55,10 +55,10 @@ class _HomePageState extends State<HomePage> {
                   Pressable_Button(
                     onTap: () {
                       Navigator.of(context).pushNamedAndRemoveUntil(
-                          login2Route, (route) => false);
+                          loginRoute, (route) => false);
                     },
                     buttontext: 'Login',
-                    horizontalLength: 30,
+                    horizontalLength: 40,
                   ),
 
                   const SizedBox(
@@ -68,22 +68,15 @@ class _HomePageState extends State<HomePage> {
                   Pressable_Button(
                     onTap: () {
                       Navigator.of(context).pushNamedAndRemoveUntil(
-                          registerRoute, (route) => false);
+                          register2Route, (route) => false);
                     },
                     buttontext: 'Register',
-                    horizontalLength: 30,
+                    horizontalLength: 35,
                   ),
 
                   //**********************************************************************/
                 ],
               ),
-              //****************************Delete this */
-              // Pressable_Button(
-              //     onTap: () {
-              //       Navigator.of(context).pushNamedAndRemoveUntil(
-              //           testpageroute, (route) => false);
-              //     },
-              //     buttontext: "Test"),
             ],
           ),
         ),

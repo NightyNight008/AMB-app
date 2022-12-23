@@ -30,96 +30,98 @@ class _LoginPageState extends State<LoginPage> {
       backgroundColor: Colors.grey[300],
       body: SafeArea(
         child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              //******************************************************************** */
-              const Icon(Icons.medical_services, size: 100),
-              const Text(
-                "Hi,",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 24,
-                ),
-              ),
-
-              //********************************************************************* */
-              const Text(
-                "Welcome Back",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 24,
-                ),
-              ),
-              const SizedBox(
-                height: 3,
-              ),
-              //***************************email textfield*****************************
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                child: Container(
-                  decoration: BoxDecoration(
-                      color: Colors.grey[200],
-                      border: Border.all(color: Colors.white),
-                      borderRadius: BorderRadius.circular(12)),
-                  child: const TextField(
-                    decoration: InputDecoration(
-                        border: InputBorder.none, hintText: "Email"),
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                //******************************************************************** */
+                const Icon(Icons.medical_services, size: 100),
+                const Text(
+                  "Hi,",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 24,
                   ),
                 ),
-              ),
-              const SizedBox(
-                height: 5,
-              ),
-              //***************************password text field**************************************
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                child: Container(
-                  decoration: BoxDecoration(
-                      color: Colors.grey[200],
-                      border: Border.all(color: Colors.white),
-                      borderRadius: BorderRadius.circular(12)),
-                  child: const TextField(
-                    obscureText: true,
-                    decoration: InputDecoration(
-                        border: InputBorder.none, hintText: "Password"),
+
+                //********************************************************************* */
+                const Text(
+                  "Welcome Back",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 24,
                   ),
                 ),
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              //************************Login button************************************************** */
-              Pressable_Button(
-                onTap: () {
-                  Navigator.of(context)
-                      .pushNamedAndRemoveUntil(loginRoute, (route) => false);
-                },
-                buttontext: 'Login',
-                verticallength: 22,
-                horizontalLength: 80,
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              /**************************************************************************************/
-
-              //*********************not a member************************************************/
-
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Text("Not Registered?"),
-                  TextButton(
-                    onPressed: () {
-                      Navigator.of(context).pushNamedAndRemoveUntil(
-                          registerRoute, (route) => false);
-                    },
-                    child: const Text("Register Here"),
+                const SizedBox(
+                  height: 3,
+                ),
+                //***************************email textfield*****************************
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                  child: Container(
+                    decoration: BoxDecoration(
+                        color: Colors.grey[200],
+                        border: Border.all(color: Colors.white),
+                        borderRadius: BorderRadius.circular(12)),
+                    child: const TextField(
+                      decoration: InputDecoration(
+                          border: InputBorder.none, hintText: "Email"),
+                    ),
                   ),
-                ],
-              ),
-            ],
+                ),
+                const SizedBox(
+                  height: 5,
+                ),
+                //***************************password text field**************************************
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                  child: Container(
+                    decoration: BoxDecoration(
+                        color: Colors.grey[200],
+                        border: Border.all(color: Colors.white),
+                        borderRadius: BorderRadius.circular(12)),
+                    child: const TextField(
+                      obscureText: true,
+                      decoration: InputDecoration(
+                          border: InputBorder.none, hintText: "Password"),
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                //************************Login button************************************************** */
+                Pressable_Button(
+                  onTap: () {
+                    Navigator.of(context).pushNamedAndRemoveUntil(
+                        profilepageroute, (route) => false);
+                  },
+                  buttontext: 'Login',
+                  verticallength: 22,
+                  horizontalLength: 80,
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                /**************************************************************************************/
+
+                //*********************not a member************************************************/
+
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Text("Not Registered?"),
+                    TextButton(
+                      onPressed: () {
+                        Navigator.of(context).pushNamedAndRemoveUntil(
+                            registerRoute, (route) => false);
+                      },
+                      child: const Text("Register Here"),
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       ),
