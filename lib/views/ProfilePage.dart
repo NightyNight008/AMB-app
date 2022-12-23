@@ -20,6 +20,7 @@ class _ProfilepageState extends State<Profilepage> {
       body: ListView(
         padding: EdgeInsets.zero,
         children: <Widget>[
+          //no idea wtf is this
           buildTop(),
           buildContent(),
         ],
@@ -75,6 +76,7 @@ class _ProfilepageState extends State<Profilepage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Column(
+                  //**********************Maps button */
                   children: [
                     IconButton(
                       onPressed: () {
@@ -93,6 +95,7 @@ class _ProfilepageState extends State<Profilepage> {
                 const SizedBox(
                   width: 25,
                 ),
+                //*************************book ambulance button */
                 Column(
                   children: [
                     IconButton(
@@ -103,17 +106,31 @@ class _ProfilepageState extends State<Profilepage> {
                       splashColor: Colors.lightBlueAccent,
                       splashRadius: 60,
                     ),
-                    const Text('Book an Ambulance'),
+                    const Text('Book Services'),
                   ],
                 ),
               ],
             ),
+            const SizedBox(
+              height: 5,
+            ),
+            //*********************************Notification button */
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.notifications),
+              iconSize: 60,
+              tooltip: 'Notification',
+              splashColor: Colors.lightBlueAccent,
+              splashRadius: 60,
+            ),
+            const Text('Notification')
           ],
         ),
       ),
     );
   }
 
+//*************************Stacking 2 pictures using Stack(idk how) */
   Widget buildTop() {
     final top = coverHeight - profileHeight / 2;
     final bottom = profileHeight / 2;
@@ -132,6 +149,7 @@ class _ProfilepageState extends State<Profilepage> {
       ],
     );
   }
+  //***********************Background image */
 
   Widget buildCoverImage() => Container(
         color: Colors.grey,
@@ -143,6 +161,8 @@ class _ProfilepageState extends State<Profilepage> {
         ),
       );
 
+  //****************************************Profile Picture ?? */
+
   Widget buildProfileImage() => CircleAvatar(
         radius: profileHeight / 2,
         backgroundColor: Colors.grey[700],
@@ -150,50 +170,3 @@ class _ProfilepageState extends State<Profilepage> {
             'https://images.unsplash.com/photo-1628260412297-a3377e45006f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80'),
       );
 }
-
-
-// ignore: camel_case_types
-// class listtile_widget extends StatelessWidget {
-//   const listtile_widget({
-//     Key? key,
-//     required this.title,
-//     required this.icon,
-//     required this.onPress,
-//     this.endIcon = true,
-//   }) : super(key: key);
-//   final String title;
-//   final IconData icon;
-//   final VoidCallback onPress;
-//   final bool endIcon;
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return ListTile(
-//       onTap: onPress,
-//       leading: Container(
-//         width: 40,
-//         height: 30,
-//         decoration: BoxDecoration(
-//           borderRadius: BorderRadius.circular(100),
-//           color: Colors.blue,
-//         ),
-//         child: const Icon(Icons.medical_services_rounded),
-//       ),
-//       title: const Text(
-//         'Book an Ambulance',
-//         style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-//       ),
-//       trailing: endIcon
-//           ? Container(
-//               width: 40,
-//               height: 30,
-//               decoration: BoxDecoration(
-//                 borderRadius: BorderRadius.circular(100),
-//                 color: Colors.blue,
-//               ),
-//               child: const Icon(Icons.navigate_next_rounded),
-//             )
-//           : null,
-//     );
-//   }
-// }
