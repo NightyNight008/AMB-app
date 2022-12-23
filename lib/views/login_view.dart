@@ -114,7 +114,7 @@ class _LoginPageState extends State<LoginPage> {
                     TextButton(
                       onPressed: () {
                         Navigator.of(context).pushNamedAndRemoveUntil(
-                            registerRoute, (route) => false);
+                            register2Route, (route) => false);
                       },
                       child: const Text("Register Here"),
                     ),

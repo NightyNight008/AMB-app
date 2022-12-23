@@ -41,7 +41,7 @@ class _RegisterPageState extends State<RegisterPage> {
           icon: const Icon(Icons.arrow_back_ios),
           onPressed: () {
             Navigator.of(context)
-                .pushNamedAndRemoveUntil(homepageRoute, (route) => false);
+                .pushNamedAndRemoveUntil(register2Route, (route) => false);
           },
         ),
       ),
@@ -137,15 +137,6 @@ class _RegisterPageState extends State<RegisterPage> {
                       child: const Text("Login Here"),
                     ),
                   ],
-                ),
-                //*************************************Register Button******************************
-
-                TextButton(
-                  onPressed: () {
-                    Navigator.of(context).pushNamedAndRemoveUntil(
-                        registerRoute, (route) => false);
-                  },
-                  child: const Text("Click Here to register as a driver"),
                 ),
               ],
             ),

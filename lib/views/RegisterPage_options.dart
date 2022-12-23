@@ -36,8 +36,8 @@ class _RegisterOptionsState extends State<RegisterOptions> {
 
               Pressable_Button(
                   onTap: () {
-                    Navigator.of(context)
-                        .pushNamedAndRemoveUntil(loginRoute, (route) => false);
+                    Navigator.of(context).pushNamedAndRemoveUntil(
+                        registerRoute, (route) => false);
                   },
                   buttontext: 'Register As Customer'),
               const SizedBox(
@@ -47,7 +47,7 @@ class _RegisterOptionsState extends State<RegisterOptions> {
               Pressable_Button(
                 onTap: () {
                   Navigator.of(context)
-                      .pushNamedAndRemoveUntil(loginRoute, (route) => false);
+                      .pushNamedAndRemoveUntil(registerRoute, (route) => false);
                 },
                 buttontext: 'Register As Driver',
                 horizontalLength: 65,

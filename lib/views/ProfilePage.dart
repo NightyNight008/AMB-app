@@ -1,6 +1,4 @@
 // ignore_for_file: file_names
-
-import 'package:amb_app/custom%20widgets/pressable_buttons.dart';
 import 'package:flutter/material.dart';
 
 import '../constant/routes.dart';
@@ -19,16 +17,6 @@ class _ProfilepageState extends State<Profilepage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   automaticallyImplyLeading: true,
-      //   leading: IconButton(
-      //     icon: const Icon(Icons.arrow_back_ios),
-      //     onPressed: () {
-      //       Navigator.of(context)
-      //           .pushNamedAndRemoveUntil(homepageRoute, (route) => false);
-      //     },
-      //   ),
-      // ),
       body: ListView(
         padding: EdgeInsets.zero,
         children: <Widget>[
@@ -89,7 +77,10 @@ class _ProfilepageState extends State<Profilepage> {
                 Column(
                   children: [
                     IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).pushNamedAndRemoveUntil(
+                            mapsroute, (route) => false);
+                      },
                       icon: const Icon(Icons.map_rounded),
                       iconSize: 60,
                       tooltip: 'Maps',
@@ -108,7 +99,7 @@ class _ProfilepageState extends State<Profilepage> {
                       onPressed: () {},
                       icon: const Icon(Icons.app_registration),
                       iconSize: 60,
-                      tooltip: 'Book',
+                      tooltip: 'Book Services',
                       splashColor: Colors.lightBlueAccent,
                       splashRadius: 60,
                     ),
