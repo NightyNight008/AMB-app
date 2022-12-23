@@ -18,9 +18,10 @@ class text_Field extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 25.0),
       child: Container(
         decoration: BoxDecoration(
-            color: Colors.grey[200],
-            border: Border.all(color: Colors.white),
-            borderRadius: BorderRadius.circular(12)),
+          color: Colors.grey[200],
+          border: Border.all(color: Colors.white),
+          borderRadius: BorderRadius.circular(12),
+        ),
         child: TextField(
           obscureText: obscure_text,
           decoration:

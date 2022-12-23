@@ -86,6 +86,10 @@ class _RegisterPageState extends State<RegisterPage> {
                   texthint: 'Password',
                   obscure_text: true,
                 ),
+                text_Field(
+                  texthint: 'Re-enter Password',
+                  obscure_text: true,
+                ),
                 const SizedBox(
                   height: 10,
                 ),

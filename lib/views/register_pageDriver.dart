@@ -110,9 +110,14 @@ class _RegisterDriverState extends State<RegisterDriver> {
                   texthint: 'Password',
                   obscure_text: true,
                 ),
+                text_Field(
+                  texthint: 'Re-enter Password',
+                  obscure_text: true,
+                ),
                 const SizedBox(
                   height: 10,
                 ),
+
                 /******************************************/
                 Pressable_Button(
                   onTap: () {
