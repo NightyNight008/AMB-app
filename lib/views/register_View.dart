@@ -81,10 +81,18 @@ class _RegisterPageState extends State<RegisterPage> {
                 const SizedBox(
                   height: 5,
                 ),
+                //*******************************Contact Info */
+                text_Field(texthint: 'Contact Address'),
+                const SizedBox(
+                  height: 5,
+                ),
                 //***************************password text field**************************************
                 text_Field(
                   texthint: 'Password',
                   obscure_text: true,
+                ),
+                const SizedBox(
+                  height: 5,
                 ),
                 text_Field(
                   texthint: 'Re-enter Password',
