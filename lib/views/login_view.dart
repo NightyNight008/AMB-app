@@ -2,6 +2,7 @@ import 'package:amb_app/constant/routes.dart';
 import 'package:amb_app/custom%20widgets/pressable_buttons.dart';
 import 'package:flutter/material.dart';
 
+// ignore_for_file: file_names
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
 
@@ -10,14 +11,29 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  //late means value will be assigned later
+  late final TextEditingController _email;
+  late final TextEditingController _password;
+
+  @override
+  void initState() {
+    _email = TextEditingController();
+    _password = TextEditingController();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _email.dispose();
+    _password.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        title: const Text(
-          'Login',
-        ),
+        title: const Text('Login'),
         automaticallyImplyLeading: true,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios),
@@ -28,9 +44,9 @@ class _LoginPageState extends State<LoginPage> {
         ),
       ),
       backgroundColor: Colors.grey[300],
-      body: SafeArea(
-        child: Center(
-          child: SingleChildScrollView(
+      body: Center(
+        child: SingleChildScrollView(
+          child: SafeArea(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -43,7 +59,9 @@ class _LoginPageState extends State<LoginPage> {
                     fontSize: 24,
                   ),
                 ),
-
+                const SizedBox(
+                  height: 24,
+                ),
                 //********************************************************************* */
                 const Text(
                   "Welcome Back",
@@ -53,7 +71,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
                 const SizedBox(
-                  height: 3,
+                  height: 30,
                 ),
                 //***************************email textfield*****************************
                 Padding(
@@ -90,27 +108,25 @@ class _LoginPageState extends State<LoginPage> {
                 const SizedBox(
                   height: 10,
                 ),
-                //************************Login button************************************************** */
+                /******************************************/
                 Pressable_Button(
                   onTap: () {
                     Navigator.of(context).pushNamedAndRemoveUntil(
                         profilepageroute, (route) => false);
                   },
                   buttontext: 'Login',
-                  verticallength: 22,
                   horizontalLength: 80,
+                  verticallength: 22,
                 ),
                 const SizedBox(
                   height: 10,
                 ),
-                /**************************************************************************************/
-
-                //*********************not a member************************************************/
+                /*********************************************/
 
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Text("Not Registered?"),
+                    const Text('Not Registered yet?'),
                     TextButton(
                       onPressed: () {
                         Navigator.of(context).pushNamedAndRemoveUntil(
