@@ -1,4 +1,5 @@
 import 'package:amb_app/constant/routes.dart';
+import 'package:amb_app/custom%20widgets/Text_field.dart';
 import 'package:amb_app/custom%20widgets/pressable_buttons.dart';
 import 'package:flutter/material.dart';
 
@@ -74,36 +75,14 @@ class _LoginPageState extends State<LoginPage> {
                   height: 30,
                 ),
                 //***************************email textfield*****************************
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                  child: Container(
-                    decoration: BoxDecoration(
-                        color: Colors.grey[200],
-                        border: Border.all(color: Colors.white),
-                        borderRadius: BorderRadius.circular(12)),
-                    child: const TextField(
-                      decoration: InputDecoration(
-                          border: InputBorder.none, hintText: "Email"),
-                    ),
-                  ),
-                ),
+                text_Field(texthint: 'Email'),
                 const SizedBox(
                   height: 5,
                 ),
                 //***************************password text field**************************************
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                  child: Container(
-                    decoration: BoxDecoration(
-                        color: Colors.grey[200],
-                        border: Border.all(color: Colors.white),
-                        borderRadius: BorderRadius.circular(12)),
-                    child: const TextField(
-                      obscureText: true,
-                      decoration: InputDecoration(
-                          border: InputBorder.none, hintText: "Password"),
-                    ),
-                  ),
+                text_Field(
+                  texthint: 'Email',
+                  obscure_text: true,
                 ),
                 const SizedBox(
                   height: 10,

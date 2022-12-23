@@ -5,3 +5,4 @@ const homepageRoute = '/homepage/';
 const profilepageroute = '/profilepage/';
 const testpageroute = '/testpage';
 const mapsroute = '/maps';
+const registerdriverroute = "/registerdriver";

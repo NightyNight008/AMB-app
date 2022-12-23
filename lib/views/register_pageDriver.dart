@@ -1,37 +1,19 @@
 // ignore_for_file: file_names
 
 import 'package:amb_app/custom%20widgets/Text_field.dart';
-import 'package:amb_app/custom%20widgets/pressable_buttons.dart';
 import 'package:flutter/material.dart';
 
 import '../constant/routes.dart';
+import '../custom widgets/pressable_buttons.dart';
 
-class RegisterPage extends StatefulWidget {
-  const RegisterPage({Key? key}) : super(key: key);
+class RegisterDriver extends StatefulWidget {
+  const RegisterDriver({Key? key}) : super(key: key);
 
   @override
-  State<RegisterPage> createState() => _RegisterPageState();
+  State<RegisterDriver> createState() => _RegisterDriverState();
 }
 
-class _RegisterPageState extends State<RegisterPage> {
-  //late means value will be assigned later
-  late final TextEditingController _email;
-  late final TextEditingController _password;
-
-  @override
-  void initState() {
-    _email = TextEditingController();
-    _password = TextEditingController();
-    super.initState();
-  }
-
-  @override
-  void dispose() {
-    _email.dispose();
-    _password.dispose();
-    super.dispose();
-  }
-
+class _RegisterDriverState extends State<RegisterDriver> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -73,6 +55,48 @@ class _RegisterPageState extends State<RegisterPage> {
                     fontSize: 24,
                   ),
                 ),
+                const SizedBox(
+                  height: 30,
+                ),
+                //*********************************************Full Name */
+                text_Field(texthint: 'Full Name'),
+                //**********************************************D.O.B */
+                text_Field(texthint: 'Date of Birth(DD-MM-YY)'),
+                //**************************************************Permanent Address*/
+                text_Field(texthint: 'Permanent Address'),
+                //***************************************Contact number */
+                text_Field(texthint: 'Contact Number'),
+                //**********************************************************Current Adress */
+                text_Field(texthint: 'Current Address'),
+                const SizedBox(
+                  height: 30,
+                ),
+                //**************************************************CitizenShip Number */
+                const Text('CitizenShip Details'),
+                text_Field(texthint: 'CitizenShip Number'),
+                //**************************************************CitizenShip Issue Date */
+                text_Field(texthint: 'Issue Date(DD-MM-YY)'),
+                //*****************************************************Issued by */
+                text_Field(texthint: 'Issue by(District)'),
+                const SizedBox(
+                  height: 30,
+                ),
+                //********************************************Passport */
+                const Text('Passport Details'),
+                text_Field(texthint: 'Pasport Number'),
+                //**************************************************CitizenShip Issue Date */
+                text_Field(texthint: 'Issue Date(DD-MM-YY)'),
+                //*****************************************************Issued by */
+                text_Field(texthint: 'Issue by(District)'),
+                const SizedBox(
+                  height: 30,
+                ),
+                //************************Identification Card */
+                const Text(
+                    'Identification Cards(i.e VotersId/Driving license,etc)'),
+                text_Field(texthint: 'Identification Number'),
+                //***************************************Issued by */
+                text_Field(texthint: 'Issue Date'),
                 const SizedBox(
                   height: 30,
                 ),

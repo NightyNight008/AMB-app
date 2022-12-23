@@ -46,8 +46,8 @@ class _RegisterOptionsState extends State<RegisterOptions> {
 //********************************Login as driver */
               Pressable_Button(
                 onTap: () {
-                  Navigator.of(context)
-                      .pushNamedAndRemoveUntil(registerRoute, (route) => false);
+                  Navigator.of(context).pushNamedAndRemoveUntil(
+                      registerdriverroute, (route) => false);
                 },
                 buttontext: 'Register As Driver',
                 horizontalLength: 65,

@@ -4,6 +4,7 @@ import 'package:amb_app/views/ProfilePage.dart';
 import 'package:amb_app/views/home_view.dart';
 import 'package:amb_app/views/login_view.dart';
 import 'package:amb_app/views/register_View.dart';
+import 'package:amb_app/views/register_pageDriver.dart';
 import 'package:flutter/material.dart';
 
 import 'views/Maps.dart';
@@ -27,6 +28,7 @@ void main() {
         homepageRoute: (context) => const HomePage(),
         profilepageroute: (context) => const Profilepage(),
         mapsroute: (context) => const Maps(),
+        registerdriverroute: (context) => const RegisterDriver(),
       },
     ),
   );
