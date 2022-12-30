@@ -47,13 +47,13 @@ class CardButton extends StatelessWidget {
               //     onTap: () {},
               //   ),
               // ),
-              const Positioned(
+              Positioned(
                 bottom: 8,
                 right: 0,
                 left: 0,
                 child: Text(
-                  'Book An Ambulance',
-                  style: TextStyle(
+                  text,
+                  style: const TextStyle(
                     fontWeight: FontWeight.bold,
                     fontStyle: FontStyle.italic,
                     color: Colors.black,
