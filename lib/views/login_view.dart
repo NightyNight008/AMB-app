@@ -1,5 +1,5 @@
 import 'package:amb_app/constant/routes.dart';
-import 'package:amb_app/custom%20widgets/Text_field.dart';
+import 'package:amb_app/custom%20widgets/text_field.dart';
 import 'package:amb_app/custom%20widgets/pressable_buttons.dart';
 import 'package:flutter/material.dart';
 
@@ -81,7 +81,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 //***************************password text field**************************************
                 text_Field(
-                  texthint: 'Email',
+                  texthint: 'Password',
                   obscure_text: true,
                 ),
                 const SizedBox(
@@ -89,10 +89,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 /******************************************/
                 Pressable_Button(
-                  onTap: () {
-                    Navigator.of(context).pushNamedAndRemoveUntil(
-                        profilepageroute, (route) => false);
-                  },
+                  onTap: profilePhome,
                   buttontext: 'Login',
                   horizontalLength: 80,
                   verticallength: 22,

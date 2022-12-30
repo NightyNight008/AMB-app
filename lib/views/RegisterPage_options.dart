@@ -35,20 +35,13 @@ class _RegisterOptionsState extends State<RegisterOptions> {
               //**************************Login as customer */
 
               Pressable_Button(
-                  onTap: () {
-                    Navigator.of(context).pushNamedAndRemoveUntil(
-                        registerRoute, (route) => false);
-                  },
-                  buttontext: 'Register As Customer'),
+                  onTap: registerRoute, buttontext: 'Register As Customer'),
               const SizedBox(
                 height: 25,
               ),
 //********************************Login as driver */
               Pressable_Button(
-                onTap: () {
-                  Navigator.of(context).pushNamedAndRemoveUntil(
-                      registerdriverroute, (route) => false);
-                },
+                onTap: registerdriverroute,
                 buttontext: 'Register As Driver',
                 horizontalLength: 65,
               ),

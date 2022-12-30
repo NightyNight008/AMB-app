@@ -27,7 +27,7 @@ class _HomePageState extends State<HomePage> {
               // *******************************************************Emergency button
 
               Pressable_Button(
-                onTap: () {},
+                onTap: loginRoute,
                 buttontext: 'Emergency',
                 buttonbackgroundcolor: const Color.fromARGB(255, 0, 255, 26),
                 horizontalLength: 100,
@@ -38,7 +38,7 @@ class _HomePageState extends State<HomePage> {
               //*************************************************Life threatening  */
 
               Pressable_Button(
-                onTap: () {},
+                onTap: loginRoute,
                 buttontext: 'Life Threatening Emergency',
                 buttonbackgroundcolor: const Color.fromARGB(255, 255, 0, 0),
               ),
@@ -53,10 +53,7 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Pressable_Button(
-                    onTap: () {
-                      Navigator.of(context).pushNamedAndRemoveUntil(
-                          loginRoute, (route) => false);
-                    },
+                    onTap: loginRoute,
                     buttontext: 'Login',
                     horizontalLength: 40,
                   ),
@@ -66,10 +63,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                   //****************************8Register Button */
                   Pressable_Button(
-                    onTap: () {
-                      Navigator.of(context).pushNamedAndRemoveUntil(
-                          register2Route, (route) => false);
-                    },
+                    onTap: register2Route,
                     buttontext: 'Register',
                     horizontalLength: 35,
                   ),

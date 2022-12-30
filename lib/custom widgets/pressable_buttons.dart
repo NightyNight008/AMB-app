@@ -10,8 +10,7 @@ class Pressable_Button extends StatelessWidget {
     this.buttonbackgroundcolor,
     Key? key,
   }) : super(key: key);
-
-  VoidCallback onTap;
+  String onTap;
   String buttontext;
   double? horizontalLength;
   double? verticallength;
@@ -20,7 +19,9 @@ class Pressable_Button extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      onPressed: onTap,
+      onPressed: () {
+        Navigator.of(context).pushNamedAndRemoveUntil(onTap, (route) => false);
+      },
       style: TextButton.styleFrom(
         backgroundColor: buttonbackgroundcolor ?? Colors.blue,
         foregroundColor: Colors.white,

@@ -6,3 +6,5 @@ const profilepageroute = '/profilepage/';
 const testpageroute = '/testpage';
 const mapsroute = '/maps';
 const registerdriverroute = "/registerdriver";
+const profilePhome = "/ProfilePhome";
+const buttonbarroute = "/ButtomOptions";

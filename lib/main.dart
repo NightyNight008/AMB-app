@@ -3,6 +3,7 @@ import 'package:amb_app/views/RegisterPage_options.dart';
 import 'package:amb_app/views/ProfilePage.dart';
 import 'package:amb_app/views/home_view.dart';
 import 'package:amb_app/views/login_view.dart';
+import 'package:amb_app/views/profile_home.dart';
 import 'package:amb_app/views/register_View.dart';
 import 'package:amb_app/views/register_pageDriver.dart';
 import 'package:flutter/material.dart';
@@ -29,6 +30,8 @@ void main() {
         profilepageroute: (context) => const Profilepage(),
         mapsroute: (context) => const Maps(),
         registerdriverroute: (context) => const RegisterDriver(),
+        profilePhome: (context) => const ProfilePhome(),
+        buttonbarroute: (context) => ButtonBar(),
       },
     ),
   );
