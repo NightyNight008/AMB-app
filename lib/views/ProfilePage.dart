@@ -56,7 +56,21 @@ class _ProfilepageState extends State<Profilepage> {
               style: TextStyle(fontSize: 20, fontStyle: FontStyle.italic),
             ),
             const SizedBox(
-              height: 25,
+              height: 50,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                TextButton(
+                  onPressed: () {},
+                  child: const Text('Contact Us'),
+                ),
+                const Text('|'),
+                TextButton(
+                  onPressed: () {},
+                  child: const Text('About Us'),
+                ),
+              ],
             ),
           ],
         ),

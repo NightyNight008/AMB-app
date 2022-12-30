@@ -27,31 +27,6 @@ class _ProfilePhomeState extends State<ProfilePhome> {
         index: _currentIndex,
         children: screens,
       ),
-      // screens[_currentIndex],
-      // Center(
-      //   child: SingleChildScrollView(
-      //     child: Column(
-      //       children: [
-      //         CardButton(
-      //           tap: () {},
-      //           text: 'Book an Ambulance',
-      //           details:
-      //               'If you or any of your loved ones are in the need of Medical services.You can request for our services,on the day and time of your wish.',
-      //           link: 'assets/images/Ambulance1.jpg',
-      //           pressbutton: 'Request',
-      //         ),
-      //         CardButton(
-      //           tap: () {},
-      //           text: 'Find Now',
-      //           details:
-      //               'You can locate nearby ambulances and hospitals close to you',
-      //           link: 'assets/images/Maps.jpg',
-      //           pressbutton: 'Find Now',
-      //         ),
-      //       ],
-      //     ),
-      //   ),
-      // ),
       bottomNavigationBar: BottomNavigationBar(
         showUnselectedLabels: true,
         currentIndex: _currentIndex,
