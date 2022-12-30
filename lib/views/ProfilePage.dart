@@ -1,8 +1,6 @@
 // ignore_for_file: file_names
 import 'package:flutter/material.dart';
 
-import '../constant/routes.dart';
-
 class Profilepage extends StatefulWidget {
   const Profilepage({super.key});
 
@@ -33,20 +31,8 @@ class _ProfilepageState extends State<Profilepage> {
       padding: const EdgeInsets.symmetric(horizontal: 48),
       child: Center(
         child: Column(
+          // ignore: prefer_const_literals_to_create_immutables
           children: [
-            Row(
-              children: [
-                IconButton(
-                  icon: const Icon(Icons.arrow_back_ios),
-                  onPressed: () {
-                    Navigator.of(context).pushNamedAndRemoveUntil(
-                        homepageRoute, (route) => false);
-                  },
-                ),
-                const Text('Back'),
-              ],
-            ),
-
             const SizedBox(
               height: 5,
             ),
@@ -72,58 +58,6 @@ class _ProfilepageState extends State<Profilepage> {
             const SizedBox(
               height: 25,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Column(
-                  //**********************Maps button */
-                  children: [
-                    IconButton(
-                      onPressed: () {
-                        Navigator.of(context).pushNamedAndRemoveUntil(
-                            mapsroute, (route) => false);
-                      },
-                      icon: const Icon(Icons.map_rounded),
-                      iconSize: 60,
-                      tooltip: 'Maps',
-                      splashColor: Colors.lightBlueAccent,
-                      splashRadius: 60,
-                    ),
-                    const Text('Map'),
-                  ],
-                ),
-                const SizedBox(
-                  width: 25,
-                ),
-                //*************************book ambulance button */
-                Column(
-                  children: [
-                    IconButton(
-                      onPressed: () {},
-                      icon: const Icon(Icons.app_registration),
-                      iconSize: 60,
-                      tooltip: 'Book Services',
-                      splashColor: Colors.lightBlueAccent,
-                      splashRadius: 60,
-                    ),
-                    const Text('Book Services'),
-                  ],
-                ),
-              ],
-            ),
-            const SizedBox(
-              height: 5,
-            ),
-            //*********************************Notification button */
-            IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.notifications),
-              iconSize: 60,
-              tooltip: 'Notification',
-              splashColor: Colors.lightBlueAccent,
-              splashRadius: 60,
-            ),
-            const Text('Notification')
           ],
         ),
       ),

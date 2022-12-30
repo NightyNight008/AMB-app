@@ -1,3 +1,5 @@
+import 'package:amb_app/views/user_options.dart';
+
 const loginRoute = '/login/';
 const registerRoute = '/register/';
 const register2Route = '/register2/';
@@ -7,4 +9,4 @@ const testpageroute = '/testpage';
 const mapsroute = '/maps';
 const registerdriverroute = "/registerdriver";
 const profilePhome = "/ProfilePhome";
-const buttonbarroute = "/ButtomOptions";
+const useroptionsroute = "/UserOptions";

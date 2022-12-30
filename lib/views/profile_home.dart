@@ -1,7 +1,9 @@
 import 'package:amb_app/constant/routes.dart';
 import 'package:amb_app/views/ProfilePage.dart';
+import 'package:amb_app/views/user_options.dart';
 import 'package:flutter/material.dart';
 import '../custom widgets/cardbutton.dart';
+import 'login_view.dart';
 
 class ProfilePhome extends StatefulWidget {
   const ProfilePhome({super.key});
@@ -11,9 +13,9 @@ class ProfilePhome extends StatefulWidget {
 }
 
 class _ProfilePhomeState extends State<ProfilePhome> {
-  int currentIndex = 0;
+  int _currentIndex = 0;
   final screens = [
-    const ProfilePhome(),
+    const UserOptions(),
     const Center(child: Text('Notification', style: TextStyle(fontSize: 60))),
     const Profilepage(),
     const Center(child: Text('Logout', style: TextStyle(fontSize: 60))),
@@ -21,45 +23,39 @@ class _ProfilePhomeState extends State<ProfilePhome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Home'),
-        automaticallyImplyLeading: true,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back_ios),
-          onPressed: () {
-            Navigator.of(context)
-                .pushNamedAndRemoveUntil(homepageRoute, (route) => false);
-          },
-        ),
+      body: IndexedStack(
+        index: _currentIndex,
+        children: screens,
       ),
-      body: Center(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              CardButton(
-                tap: () {},
-                text: 'Book an Ambulance',
-                details:
-                    'If you or any of your loved ones are in the need of Medical services.You can request for our services,on the day and time of your wish.',
-                link: 'assets/images/Ambulance1.jpg',
-                pressbutton: 'Request',
-              ),
-              CardButton(
-                tap: () {},
-                text: 'Find Now',
-                details:
-                    'You can locate nearby ambulances and hospitals close to you',
-                link: 'assets/images/Maps.jpg',
-                pressbutton: 'Find Now',
-              ),
-            ],
-          ),
-        ),
-      ),
+      // screens[_currentIndex],
+      // Center(
+      //   child: SingleChildScrollView(
+      //     child: Column(
+      //       children: [
+      //         CardButton(
+      //           tap: () {},
+      //           text: 'Book an Ambulance',
+      //           details:
+      //               'If you or any of your loved ones are in the need of Medical services.You can request for our services,on the day and time of your wish.',
+      //           link: 'assets/images/Ambulance1.jpg',
+      //           pressbutton: 'Request',
+      //         ),
+      //         CardButton(
+      //           tap: () {},
+      //           text: 'Find Now',
+      //           details:
+      //               'You can locate nearby ambulances and hospitals close to you',
+      //           link: 'assets/images/Maps.jpg',
+      //           pressbutton: 'Find Now',
+      //         ),
+      //       ],
+      //     ),
+      //   ),
+      // ),
       bottomNavigationBar: BottomNavigationBar(
         showUnselectedLabels: true,
-        currentIndex: currentIndex,
-        onTap: (index) => setState(() => {currentIndex = index}),
+        currentIndex: _currentIndex,
+        onTap: (index) => setState(() => {_currentIndex = index}),
         items: const [
           BottomNavigationBarItem(
             icon: Icon(
