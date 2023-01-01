@@ -39,6 +39,7 @@ dependencies:
   get: any
   fab_circular_menu: any
   firebase_core: ^2.3.0
+  firebase_auth: ^4.2.4
 
 dev_dependencies:
   flutter_test:
