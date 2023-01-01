@@ -12,11 +12,10 @@ import 'package:flutter/material.dart';
 import 'views/Maps.dart';
 
 void main() {
-  //read architectural overview of flutter in site,to know about line widejetflutter binding
+  //widget flutter bindings
   WidgetsFlutterBinding.ensureInitialized();
   runApp(
     MaterialApp(
-      // initialRoute: '/Homepage/',
       debugShowCheckedModeBanner: false,
       title: 'Amb App',
       theme: ThemeData(

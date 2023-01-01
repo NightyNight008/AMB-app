@@ -18,7 +18,7 @@ class _ProfilepageState extends State<Profilepage> {
       body: ListView(
         padding: EdgeInsets.zero,
         children: <Widget>[
-          //no idea wtf is this
+          //************* */
           buildTop(),
           buildContent(),
         ],
@@ -79,7 +79,7 @@ class _ProfilepageState extends State<Profilepage> {
     );
   }
 
-//*************************Stacking 2 pictures using Stack(idk how) */
+//*************************Stacking 2 pictures using Stack */
   Widget buildTop() {
     final top = coverHeight - profileHeight / 2;
     final bottom = profileHeight / 2;
