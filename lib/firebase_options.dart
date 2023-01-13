@@ -44,40 +44,44 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyD41rTvRRI0vsnCkir7q0kLp9R1-teSj0E',
-    appId: '1:497274018294:web:d0506463563164d7f14fd7',
-    messagingSenderId: '497274018294',
-    projectId: 'ambulanceapp02',
-    authDomain: 'ambulanceapp02.firebaseapp.com',
-    storageBucket: 'ambulanceapp02.appspot.com',
-    measurementId: 'G-WK64GYWFDX',
+    apiKey: 'AIzaSyChItLkbZ9t-BdJTwDmjdlGh3WkciDqET0',
+    appId: '1:531471190184:web:0a3f56bd02ee02ce001a9d',
+    messagingSenderId: '531471190184',
+    projectId: 'ambulanceapp-6667d',
+    authDomain: 'ambulanceapp-6667d.firebaseapp.com',
+    databaseURL: 'https://ambulanceapp-6667d-default-rtdb.firebaseio.com',
+    storageBucket: 'ambulanceapp-6667d.appspot.com',
+    measurementId: 'G-TQ763495P3',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAW1Ane5zPkHwAzGP_QIGeAFE9owa07Ruk',
-    appId: '1:497274018294:android:13e06bb0f44c9dddf14fd7',
-    messagingSenderId: '497274018294',
-    projectId: 'ambulanceapp02',
-    storageBucket: 'ambulanceapp02.appspot.com',
+    apiKey: 'AIzaSyBGAbhuMB9ppxEH4gvm_C6etMDhsOLWxc0',
+    appId: '1:531471190184:android:b02dd854cc5e65f8001a9d',
+    messagingSenderId: '531471190184',
+    projectId: 'ambulanceapp-6667d',
+    databaseURL: 'https://ambulanceapp-6667d-default-rtdb.firebaseio.com',
+    storageBucket: 'ambulanceapp-6667d.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDmgotK0g6Gh_C4s7KKXxsoJXJz6xgOAFY',
-    appId: '1:497274018294:ios:8c7db36dbc034534f14fd7',
-    messagingSenderId: '497274018294',
-    projectId: 'ambulanceapp02',
-    storageBucket: 'ambulanceapp02.appspot.com',
-    iosClientId: '497274018294-mvaad3lq1n0pdb682ni3dgdd9phlq4l8.apps.googleusercontent.com',
+    apiKey: 'AIzaSyC0fXzKLuYLPLdAfx6I9TUkORiK1B-kpas',
+    appId: '1:531471190184:ios:92fd22d9423855d9001a9d',
+    messagingSenderId: '531471190184',
+    projectId: 'ambulanceapp-6667d',
+    databaseURL: 'https://ambulanceapp-6667d-default-rtdb.firebaseio.com',
+    storageBucket: 'ambulanceapp-6667d.appspot.com',
+    iosClientId: '531471190184-f8c05fffg6gocgv7amqfvr4cdrpvee4k.apps.googleusercontent.com',
     iosBundleId: 'com.example.ambApp',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyDmgotK0g6Gh_C4s7KKXxsoJXJz6xgOAFY',
-    appId: '1:497274018294:ios:8c7db36dbc034534f14fd7',
-    messagingSenderId: '497274018294',
-    projectId: 'ambulanceapp02',
-    storageBucket: 'ambulanceapp02.appspot.com',
-    iosClientId: '497274018294-mvaad3lq1n0pdb682ni3dgdd9phlq4l8.apps.googleusercontent.com',
+    apiKey: 'AIzaSyC0fXzKLuYLPLdAfx6I9TUkORiK1B-kpas',
+    appId: '1:531471190184:ios:92fd22d9423855d9001a9d',
+    messagingSenderId: '531471190184',
+    projectId: 'ambulanceapp-6667d',
+    databaseURL: 'https://ambulanceapp-6667d-default-rtdb.firebaseio.com',
+    storageBucket: 'ambulanceapp-6667d.appspot.com',
+    iosClientId: '531471190184-f8c05fffg6gocgv7amqfvr4cdrpvee4k.apps.googleusercontent.com',
     iosBundleId: 'com.example.ambApp',
   );
 }

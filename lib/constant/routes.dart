@@ -1,4 +1,4 @@
-import 'package:amb_app/views/user_options.dart';
+import 'package:amb_app/views/user_profileoptions.dart';
 
 const loginRoute = '/login/';
 const registerRoute = '/register/';
@@ -10,3 +10,6 @@ const mapsroute = '/maps';
 const registerdriverroute = "/registerdriver";
 const profilePhome = "/ProfilePhome";
 const useroptionsroute = "/UserOptions";
+const databaseroute = "/Database";
+const readroute = "/Read";
+const writeroute = "/write";

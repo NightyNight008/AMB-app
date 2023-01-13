@@ -27,9 +27,6 @@ class CardButton extends StatelessWidget {
       ),
       child: Column(
         children: [
-          // const SizedBox(
-          //   height: 10,
-          // ),
           Stack(
             children: [
               Image.asset(
@@ -37,20 +34,10 @@ class CardButton extends StatelessWidget {
                 height: 180,
                 fit: BoxFit.fill,
               ),
-
-              // Ink.image(
-              //   image: NetworkImage(link),
-              //   height: 150,
-              //   fit: BoxFit.cover,
-              //   width: double.infinity,
-              //   child: InkWell(
-              //     onTap: () {},
-              //   ),
-              // ),
               Positioned(
                 bottom: 8,
-                right: 0,
-                left: 0,
+                right: 8,
+                left: 8,
                 child: Text(
                   text,
                   style: const TextStyle(
@@ -63,7 +50,6 @@ class CardButton extends StatelessWidget {
               ),
             ],
           ),
-
           const SizedBox(
             height: 18,
           ),

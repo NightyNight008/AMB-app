@@ -1,3 +1,4 @@
+import 'package:amb_app/custom%20widgets/cardbutton.dart';
 import 'package:amb_app/custom%20widgets/pressable_buttons.dart';
 import 'package:flutter/material.dart';
 
@@ -14,64 +15,99 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      // floatingActionButton: Container(
+      //   padding: const EdgeInsets.symmetric(horizontal: 8),
+      //   height: 60,
+      //   width: double.infinity,
+      //   margin: const EdgeInsets.symmetric(
+      //     horizontal: 8,
+      //   ),
+      //   decoration: BoxDecoration(
+      //     borderRadius: BorderRadius.circular(40),
+      //     color: Colors.purple,
+      //   ),
+      //   child: const Text(
+      //     'Login',
+      //     textAlign: TextAlign.center,
+      //   ),
+      // ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.of(context)
+              .pushNamedAndRemoveUntil(loginRoute, (route) => false);
+        },
+        child: const Text('Login'),
+      ),
+
       backgroundColor: const Color.fromARGB(255, 253, 252, 253),
       body: SafeArea(
         child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const Text("Press the buttons as per your need"),
-              const SizedBox(
-                height: 25,
-              ),
-              // *******************************************************Emergency button
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                // *******************************************************Emergency button
 
-              Pressable_Button(
-                onTap: loginRoute,
-                buttontext: 'Emergency',
-                buttonbackgroundcolor: const Color.fromARGB(255, 0, 255, 26),
-                horizontalLength: 100,
-              ),
-              const SizedBox(
-                height: 25,
-              ),
-              //*************************************************Life threatening  */
+                CardButton(
+                    tap: () {},
+                    text: 'For Normal Cases',
+                    details:
+                        "In case of minor injury and other medical help press this button.In case of minor injury and other medical help press this button.In case of minor injury and other medical help press this button.In case of minor injury and other medical help press this button.",
+                    link: "assets/images/injured.jpg",
+                    pressbutton: 'Request'),
 
-              Pressable_Button(
-                onTap: loginRoute,
-                buttontext: 'Life Threatening Emergency',
-                buttonbackgroundcolor: const Color.fromARGB(255, 255, 0, 0),
-              ),
+                //*************************************************Life threatening  */
+                const SizedBox(
+                  height: 10,
+                ),
+                CardButton(
+                    tap: () {},
+                    text: 'For emergency cases',
+                    details:
+                        "In case of life threatening incidents,press this button.In case of life threatening incidents,press this buttonIn case of life threatening incidents,press this buttonIn case of life threatening incidents,press this buttonIn case of life threatening incidents,press this button",
+                    link: "assets/images/icu.jpg",
+                    pressbutton: 'Request'),
 
-              //*****************************************************/
-              const SizedBox(
-                height: 100,
-              ),
-              //*****************************Login Button On Homepage */
+                //*****************************************************/
+                //*****************************Login Button On Homepage */
 
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Pressable_Button(
-                    onTap: loginRoute,
-                    buttontext: 'Login',
-                    horizontalLength: 40,
-                  ),
+                // Center(
+                //   child: Row(
+                //     mainAxisAlignment: MainAxisAlignment.end,
+                //     children: [
+                //       Pressable_Button(
+                //         onTap: loginRoute,
+                //         buttontext: 'Login',
+                //         horizontalLength: 90,
+                //       ),
 
-                  const SizedBox(
-                    width: 10,
-                  ),
-                  //****************************8Register Button */
-                  Pressable_Button(
-                    onTap: register2Route,
-                    buttontext: 'Register',
-                    horizontalLength: 35,
-                  ),
+                //       const SizedBox(
+                //         width: 10,
+                //       ),
+                //       //****************************Register Button */
+                //       Pressable_Button(
+                //         onTap: register2Route,
+                //         buttontext: 'Register',
+                //         horizontalLength: 90,
+                //       ),
 
-                  //**********************************************************************/
-                ],
-              ),
-            ],
+                //       //**********************************************************************/
+                //     ],
+                //   ),
+                // ),
+
+                //REmove this
+                const SizedBox(
+                  height: 5,
+                ),
+                Pressable_Button(onTap: databaseroute, buttontext: 'Database'),
+                // *****till here
+                const SizedBox(
+                  height: 80,
+                ),
+              ],
+            ),
           ),
         ),
       ),
