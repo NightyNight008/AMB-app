@@ -7,7 +7,7 @@ import 'package:amb_app/views/ProfilePage.dart';
 import 'package:amb_app/views/home_view.dart';
 import 'package:amb_app/views/login_view.dart';
 import 'package:amb_app/views/user_profileoptions.dart';
-import 'package:amb_app/views/profile_home.dart';
+import 'package:amb_app/views/profile_home_navbar.dart';
 import 'package:amb_app/views/register_View.dart';
 import 'package:amb_app/views/register_pageDriver.dart';
 import 'package:firebase_auth/firebase_auth.dart';

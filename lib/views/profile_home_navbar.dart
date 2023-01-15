@@ -1,9 +1,7 @@
-import 'package:amb_app/constant/routes.dart';
+import 'package:amb_app/views/Logout.dart';
 import 'package:amb_app/views/ProfilePage.dart';
 import 'package:amb_app/views/user_profileoptions.dart';
 import 'package:flutter/material.dart';
-import '../custom widgets/cardbutton.dart';
-import 'login_view.dart';
 
 class ProfilePhome extends StatefulWidget {
   const ProfilePhome({super.key});
@@ -18,7 +16,7 @@ class _ProfilePhomeState extends State<ProfilePhome> {
     const UserOptions(),
     const Center(child: Text('Notification', style: TextStyle(fontSize: 60))),
     const Profilepage(),
-    const Center(child: Text('Logout', style: TextStyle(fontSize: 60))),
+    //  const Logout(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -56,14 +54,14 @@ class _ProfilePhomeState extends State<ProfilePhome> {
             label: 'Profile',
             backgroundColor: Colors.blue,
           ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.logout,
-              color: Colors.grey,
-            ),
-            label: 'Logout',
-            backgroundColor: Colors.blue,
-          ),
+          // BottomNavigationBarItem(
+          //   icon: Icon(
+          //     Icons.logout,
+          //     color: Colors.grey,
+          //   ),
+          //   label: 'Logout',
+          //   backgroundColor: Colors.blue,
+          // ),
         ],
       ),
     );
