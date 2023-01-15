@@ -30,10 +30,20 @@ class _DatabaseState extends State<Database> {
         child: Center(
           child: Column(
             children: [
-              Pressable_Button(onTap: writeroute, buttontext: 'Write'),
+              Pressable_Button(
+                  onTap: () {
+                    Navigator.of(context)
+                        .pushNamedAndRemoveUntil(writeroute, (route) => false);
+                  },
+                  buttontext: 'Write'),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Pressable_Button(onTap: readroute, buttontext: 'Read'),
+                child: Pressable_Button(
+                    onTap: () {
+                      Navigator.of(context)
+                          .pushNamedAndRemoveUntil(readroute, (route) => false);
+                    },
+                    buttontext: 'Read'),
               )
             ],
           ),

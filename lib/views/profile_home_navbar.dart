@@ -1,5 +1,4 @@
-import 'package:amb_app/views/Logout.dart';
-import 'package:amb_app/views/ProfilePage.dart';
+import 'package:amb_app/views/profilePage.dart';
 import 'package:amb_app/views/user_profileoptions.dart';
 import 'package:flutter/material.dart';
 

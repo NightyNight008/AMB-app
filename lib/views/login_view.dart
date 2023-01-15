@@ -1,9 +1,8 @@
 import 'package:amb_app/constant/routes.dart';
-import 'package:amb_app/custom%20widgets/Text_field.dart';
+import 'package:amb_app/custom%20widgets/text_field.dart';
 import 'package:amb_app/custom%20widgets/pressable_buttons.dart';
 import 'package:flutter/material.dart';
 
-// ignore_for_file: file_names
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
 
@@ -89,7 +88,10 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 /******************************************/
                 Pressable_Button(
-                  onTap: profilePhome,
+                  onTap: () {
+                    Navigator.of(context).pushNamedAndRemoveUntil(
+                        profilePhome, (route) => false);
+                  },
                   buttontext: 'Login',
                   horizontalLength: 80,
                   verticallength: 22,

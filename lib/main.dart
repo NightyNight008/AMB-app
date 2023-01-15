@@ -2,8 +2,8 @@ import 'package:amb_app/Database/database.dart';
 import 'package:amb_app/Database/read.dart';
 import 'package:amb_app/Database/write.dart';
 import 'package:amb_app/constant/routes.dart';
-import 'package:amb_app/views/RegisterPage_options.dart';
-import 'package:amb_app/views/ProfilePage.dart';
+import 'package:amb_app/views/registerpage_options.dart';
+import 'package:amb_app/views/profilePage.dart';
 import 'package:amb_app/views/home_view.dart';
 import 'package:amb_app/views/login_view.dart';
 import 'package:amb_app/views/user_profileoptions.dart';
@@ -14,7 +14,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 import 'firebase_options.dart';
-import 'views/Maps.dart';
+import 'views/maps.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

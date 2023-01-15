@@ -1,5 +1,3 @@
-import 'package:amb_app/views/user_profileoptions.dart';
-
 const loginRoute = '/login/';
 const registerRoute = '/register/';
 const register2Route = '/register2/';

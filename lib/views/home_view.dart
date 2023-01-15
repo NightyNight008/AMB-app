@@ -101,7 +101,12 @@ class _HomePageState extends State<HomePage> {
                 const SizedBox(
                   height: 5,
                 ),
-                Pressable_Button(onTap: databaseroute, buttontext: 'Database'),
+                Pressable_Button(
+                    onTap: () {
+                      Navigator.of(context).pushNamedAndRemoveUntil(
+                          databaseroute, (route) => false);
+                    },
+                    buttontext: 'Database'),
                 // *****till here
                 const SizedBox(
                   height: 80,

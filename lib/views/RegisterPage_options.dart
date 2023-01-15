@@ -1,5 +1,3 @@
-// ignore_for_file: file_names
-
 import 'package:amb_app/constant/routes.dart';
 import 'package:amb_app/custom%20widgets/pressable_buttons.dart';
 import 'package:flutter/material.dart';
@@ -35,13 +33,20 @@ class _RegisterOptionsState extends State<RegisterOptions> {
               //**************************Login as customer */
 
               Pressable_Button(
-                  onTap: registerRoute, buttontext: 'Register As Customer'),
+                  onTap: () {
+                    Navigator.of(context).pushNamedAndRemoveUntil(
+                        registerRoute, (route) => false);
+                  },
+                  buttontext: 'Register As Customer'),
               const SizedBox(
                 height: 25,
               ),
 //********************************Login as driver */
               Pressable_Button(
-                onTap: registerdriverroute,
+                onTap: () {
+                  Navigator.of(context).pushNamedAndRemoveUntil(
+                      registerdriverroute, (route) => false);
+                },
                 buttontext: 'Register As Driver',
                 horizontalLength: 65,
               ),
