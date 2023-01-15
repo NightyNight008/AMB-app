@@ -1,6 +1,8 @@
 // ignore_for_file: file_names
 import 'package:flutter/material.dart';
 
+import '../constant/routes.dart';
+
 class Profilepage extends StatefulWidget {
   const Profilepage({super.key});
 
@@ -59,6 +61,36 @@ class _ProfilepageState extends State<Profilepage> {
             const SizedBox(
               height: 50,
             ),
+
+            TextButton(
+              onPressed: () {
+                showDialog(
+                  context: context,
+                  builder: (context) {
+                    return AlertDialog(
+                      title: const Text('Logout?'),
+                      actions: [
+                        TextButton(
+                          onPressed: () {
+                            Navigator.of(context).pushNamedAndRemoveUntil(
+                                homepageRoute, (route) => false);
+                          },
+                          child: const Text('Yes'),
+                        ),
+                        TextButton(
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                          child: const Text('No'),
+                        ),
+                      ],
+                    );
+                  },
+                );
+              },
+              child: const Text('Logout'),
+            ),
+            const SizedBox(height: 50),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

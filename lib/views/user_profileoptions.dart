@@ -19,8 +19,29 @@ class _UserOptionsState extends State<UserOptions> {
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios),
           onPressed: () {
-            Navigator.of(context)
-                .pushNamedAndRemoveUntil(homepageRoute, (route) => false);
+            showDialog(
+              context: context,
+              builder: (context) {
+                return AlertDialog(
+                  title: const Text('Logout?'),
+                  actions: [
+                    TextButton(
+                      onPressed: () {
+                        Navigator.of(context).pushNamedAndRemoveUntil(
+                            homepageRoute, (route) => false);
+                      },
+                      child: const Text('Yes'),
+                    ),
+                    TextButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      child: const Text('No'),
+                    ),
+                  ],
+                );
+              },
+            );
           },
         ),
       ),
@@ -37,30 +58,31 @@ class _UserOptionsState extends State<UserOptions> {
                 pressbutton: 'Request',
               ),
               const SizedBox(
-                  height: 10,
-                ),
+                height: 10,
+              ),
               CardButton(
-                    tap: () {},
-                    text: 'For Normal Cases',
-                    details:
-                        "In case of minor injury and other medical help press this button.In case of minor injury and other medical help press this button.In case of minor injury and other medical help press this button.In case of minor injury and other medical help press this button.",
-                    link: "assets/images/injured.jpg",
-                    pressbutton: 'Request'),
+                  tap: () {},
+                  text: 'For Normal Cases',
+                  details:
+                      "In case of minor injury and other medical help press this button.In case of minor injury and other medical help press this button.In case of minor injury and other medical help press this button.In case of minor injury and other medical help press this button.",
+                  link: "assets/images/injured.jpg",
+                  pressbutton: 'Request'),
 
-                //*************************************************Life threatening  */
-                const SizedBox(
-                  height: 10,
-                ),
-                CardButton(
-                    tap: () {},
-                    text: 'For emergency cases',
-                    details:
-                        "In case of life threatening incidents,press this button.In case of life threatening incidents,press this buttonIn case of life threatening incidents,press this buttonIn case of life threatening incidents,press this buttonIn case of life threatening incidents,press this button",
-                    link: "assets/images/icu.jpg",
-                    pressbutton: 'Request',),
-                    const SizedBox(
-                  height: 10,
-                ),
+              //*************************************************Life threatening  */
+              const SizedBox(
+                height: 10,
+              ),
+              CardButton(
+                tap: () {},
+                text: 'For emergency cases',
+                details:
+                    "In case of life threatening incidents,press this button.In case of life threatening incidents,press this buttonIn case of life threatening incidents,press this buttonIn case of life threatening incidents,press this buttonIn case of life threatening incidents,press this button",
+                link: "assets/images/icu.jpg",
+                pressbutton: 'Request',
+              ),
+              const SizedBox(
+                height: 10,
+              ),
               CardButton(
                 tap: () {},
                 text: 'Find Now',
