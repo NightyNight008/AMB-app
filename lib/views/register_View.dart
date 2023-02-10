@@ -85,6 +85,9 @@ class _RegisterPageState extends State<RegisterPage> {
                 const SizedBox(
                   height: 5,
                 ),
+                //************************************Name*/
+                text_Field(texthint: 'UserName', reference: _email),
+                const SizedBox(height: 5),
                 //*******************************Contact Info */
                 text_Field(
                   texthint: 'Contact Address',

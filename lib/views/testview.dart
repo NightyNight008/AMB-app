@@ -4,34 +4,17 @@ import 'package:flutter/material.dart';
 
 import '../constant/routes.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+class testview extends StatefulWidget {
+  const testview({Key? key}) : super(key: key);
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<testview> createState() => _testviewState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _testviewState extends State<testview> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-      // floatingActionButton: Container(
-      //   padding: const EdgeInsets.symmetric(horizontal: 8),
-      //   height: 60,
-      //   width: double.infinity,
-      //   margin: const EdgeInsets.symmetric(
-      //     horizontal: 8,
-      //   ),
-      //   decoration: BoxDecoration(
-      //     borderRadius: BorderRadius.circular(40),
-      //     color: Colors.purple,
-      //   ),
-      //   child: const Text(
-      //     'Login',
-      //     textAlign: TextAlign.center,
-      //   ),
-      // ),
       // floatingActionButton: FloatingActionButton(
       //   onPressed: () {
       //     Navigator.of(context)
@@ -39,7 +22,6 @@ class _HomePageState extends State<HomePage> {
       //   },
       //   child: const Text('Login'),
       // ),
-
       backgroundColor: const Color.fromARGB(255, 253, 252, 253),
       body: SafeArea(
         child: Center(
@@ -65,48 +47,13 @@ class _HomePageState extends State<HomePage> {
                     tap: () {},
                     text: 'For emergency cases',
                     details:
-                        "In case of life threatening incidents,press this button.In case of life threatening incidents,press this buttonIn case of life threatening incidents,press this buttonIn case of life threatening incidents,press this buttonIn case of life threatening incidents,press this button",
+                        "ing incidents,press this buttonIn case of life threatening incidents,press this buttonIn case of life threatening incidents,press this buttonIn case of life threatening incidents,press this button",
                     link: "assets/images/icu.jpg",
                     pressbutton: 'Request'),
 
-                //*****************************************************/
-                //*****************************Login Button On Homepage */
-
-                // Center(
-                //   child: Row(
-                //     mainAxisAlignment: MainAxisAlignment.end,
-                //     children: [
-                //       Pressable_Button(
-                //         onTap: loginRoute,
-                //         buttontext: 'Login',
-                //         horizontalLength: 90,
-                //       ),
-
-                //       const SizedBox(
-                //         width: 10,
-                //       ),
-                //       //****************************Register Button */
-                //       Pressable_Button(
-                //         onTap: register2Route,
-                //         buttontext: 'Register',
-                //         horizontalLength: 90,
-                //       ),
-
-                //       //**********************************************************************/
-                //     ],
-                //   ),
-                // ),
-
-                //REmove this
                 const SizedBox(
                   height: 5,
                 ),
-                Pressable_Button(
-                    onTap: () {
-                      Navigator.of(context).pushNamedAndRemoveUntil(
-                          databaseroute, (route) => false);
-                    },
-                    buttontext: 'Database'),
                 // *****till here
                 const SizedBox(
                   height: 65,
@@ -116,6 +63,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
+
       bottomSheet: Padding(
         padding: const EdgeInsets.all(1.0),
         child: SizedBox(

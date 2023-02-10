@@ -33,7 +33,7 @@ class _ProfilepageState extends State<Profilepage> {
       padding: const EdgeInsets.symmetric(horizontal: 48),
       child: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           // ignore: prefer_const_literals_to_create_immutables
           children: [
             const SizedBox(
@@ -46,16 +46,17 @@ class _ProfilepageState extends State<Profilepage> {
             const SizedBox(
               height: 16,
             ),
+
             const Text(
-              'Name :',
+              '  Name:',
               style: TextStyle(fontSize: 20, fontStyle: FontStyle.italic),
             ), //Pass the name parameter here??
             const Text(
-              'Number:',
+              ' Email:',
               style: TextStyle(fontSize: 20, fontStyle: FontStyle.italic),
             ), //Pass the number parameter here??
             const Text(
-              'Address:',
+              '  Contact:',
               style: TextStyle(fontSize: 20, fontStyle: FontStyle.italic),
             ),
             const SizedBox(

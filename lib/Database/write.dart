@@ -57,9 +57,9 @@ class _WriteState extends State<Write> {
           Pressable_Button(
               onTap: () {
                 Map<String, String> users = {
-                  'name': usernameController.text,
-                  'user2': userController.text,
-                  'user3': user2Controller.text,
+                  'Name': usernameController.text,
+                  'Age': userController.text,
+                  'Salary': user2Controller.text,
                 };
                 dbref.push().set(users);
                 print('Write sucessful');

@@ -6,6 +6,7 @@ import 'package:amb_app/views/registerpage_options.dart';
 import 'package:amb_app/views/profilePage.dart';
 import 'package:amb_app/views/home_view.dart';
 import 'package:amb_app/views/login_view.dart';
+import 'package:amb_app/views/testview.dart';
 import 'package:amb_app/views/user_profileoptions.dart';
 import 'package:amb_app/views/profile_home_navbar.dart';
 import 'package:amb_app/views/register_View.dart';
