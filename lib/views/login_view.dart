@@ -74,12 +74,13 @@ class _LoginPageState extends State<LoginPage> {
                   height: 30,
                 ),
                 //***************************email textfield*****************************
-                text_Field(texthint: 'Email'),
+                text_Field(texthint: 'Email', reference: _email),
                 const SizedBox(
                   height: 5,
                 ),
                 //***************************password text field**************************************
                 text_Field(
+                  reference: _password,
                   texthint: 'Password',
                   obscure_text: true,
                 ),

@@ -77,17 +77,25 @@ class _RegisterPageState extends State<RegisterPage> {
                   height: 30,
                 ),
                 //***************************email textfield*****************************
-                text_Field(texthint: 'Email'),
+                //Reference means controller,and value given to them are just to prevent erros,give proper values to it.
+                text_Field(
+                  texthint: 'Email',
+                  reference: _email,
+                ),
                 const SizedBox(
                   height: 5,
                 ),
                 //*******************************Contact Info */
-                text_Field(texthint: 'Contact Address'),
+                text_Field(
+                  texthint: 'Contact Address',
+                  reference: _email,
+                ),
                 const SizedBox(
                   height: 5,
                 ),
                 //***************************password text field**************************************
                 text_Field(
+                  reference: _password,
                   texthint: 'Password',
                   obscure_text: true,
                 ),
@@ -95,6 +103,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   height: 5,
                 ),
                 text_Field(
+                  reference: _password,
                   texthint: 'Re-enter Password',
                   obscure_text: true,
                 ),

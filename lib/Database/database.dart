@@ -1,5 +1,6 @@
 import 'package:amb_app/custom%20widgets/pressable_buttons.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../constant/routes.dart';
 
@@ -25,29 +26,21 @@ class _DatabaseState extends State<Database> {
           },
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Center(
-          child: Column(
-            children: [
-              Pressable_Button(
-                  onTap: () {
-                    Navigator.of(context)
-                        .pushNamedAndRemoveUntil(writeroute, (route) => false);
-                  },
-                  buttontext: 'Write'),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Pressable_Button(
-                    onTap: () {
-                      Navigator.of(context)
-                          .pushNamedAndRemoveUntil(readroute, (route) => false);
-                    },
-                    buttontext: 'Read'),
-              )
-            ],
-          ),
-        ),
+      body: Column(
+        children: [
+          Pressable_Button(
+              onTap: () {
+                Navigator.of(context)
+                    .pushNamedAndRemoveUntil(writeroute, (route) => false);
+              },
+              buttontext: 'Write to database'),
+          Pressable_Button(
+              onTap: () {
+                Navigator.of(context)
+                    .pushNamedAndRemoveUntil(readroute, (route) => false);
+              },
+              buttontext: 'Read from database'),
+        ],
       ),
     );
   }

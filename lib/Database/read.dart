@@ -1,3 +1,4 @@
+import 'package:amb_app/custom%20widgets/text_field.dart';
 import 'package:flutter/material.dart';
 
 import '../constant/routes.dart';
@@ -23,6 +24,9 @@ class _ReadState extends State<Read> {
           },
         ),
         title: const Text('Write Examples'),
+      ),
+      body: Column(
+        children: [],
       ),
     );
   }

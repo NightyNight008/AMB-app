@@ -14,6 +14,7 @@ class RegisterDriver extends StatefulWidget {
 }
 
 class _RegisterDriverState extends State<RegisterDriver> {
+  late final TextEditingController _justaplaceholder;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,59 +60,81 @@ class _RegisterDriverState extends State<RegisterDriver> {
                   height: 30,
                 ),
                 //*********************************************Full Name */
-                text_Field(texthint: 'Full Name'),
+                text_Field(
+                    texthint: 'Full Name',
+                    reference:
+                        _justaplaceholder), //reference is the controller,give controller value to reference.
                 //**********************************************D.O.B */
-                text_Field(texthint: 'Date of Birth(DD-MM-YY)'),
+                text_Field(
+                    texthint: 'Date of Birth(DD-MM-YY)',
+                    reference: _justaplaceholder),
                 //**************************************************Permanent Address*/
-                text_Field(texthint: 'Permanent Address'),
+                text_Field(
+                    texthint: 'Permanent Address',
+                    reference: _justaplaceholder),
                 //***************************************Contact number */
-                text_Field(texthint: 'Contact Number'),
+                text_Field(
+                    texthint: 'Contact Number', reference: _justaplaceholder),
                 //**********************************************************Current Adress */
-                text_Field(texthint: 'Current Address'),
+                text_Field(
+                    texthint: 'Current Address', reference: _justaplaceholder),
                 const SizedBox(
                   height: 30,
                 ),
                 //**************************************************CitizenShip Number */
                 const Text('CitizenShip Details'),
-                text_Field(texthint: 'CitizenShip Number'),
+                text_Field(
+                    texthint: 'CitizenShip Number',
+                    reference: _justaplaceholder),
                 //**************************************************CitizenShip Issue Date */
-                text_Field(texthint: 'Issue Date(DD-MM-YY)'),
+                text_Field(
+                    texthint: 'Issue Date(DD-MM-YY)',
+                    reference: _justaplaceholder),
                 //*****************************************************Issued by */
-                text_Field(texthint: 'Issue by(District)'),
+                text_Field(
+                    texthint: 'Issue by(District)',
+                    reference: _justaplaceholder),
                 const SizedBox(
                   height: 30,
                 ),
                 //********************************************Passport */
                 const Text('Passport Details'),
-                text_Field(texthint: 'Pasport Number'),
+                text_Field(
+                    texthint: 'Pasport Number', reference: _justaplaceholder),
                 //**************************************************CitizenShip Issue Date */
-                text_Field(texthint: 'Issue Date(DD-MM-YY)'),
+                text_Field(
+                    texthint: 'Issue Date(DD-MM-YY)',
+                    reference: _justaplaceholder),
                 //*****************************************************Issued by */
-                text_Field(texthint: 'Issue by(District)'),
+                text_Field(
+                    texthint: 'Issue by(District)',
+                    reference: _justaplaceholder),
                 const SizedBox(
                   height: 30,
                 ),
                 //************************Identification Card */
                 const Text(
                     'Identification Cards(i.e VotersId/Driving license,etc)'),
-                text_Field(texthint: 'Identification Number'),
+                text_Field(
+                    texthint: 'Identification Number',
+                    reference: _justaplaceholder),
                 //***************************************Issued by */
-                text_Field(texthint: 'Issue Date'),
+                text_Field(
+                  texthint: 'Issue Date',
+                  reference: _justaplaceholder,
+                ),
                 const SizedBox(
                   height: 30,
                 ),
                 //***************************email textfield*****************************
-                text_Field(texthint: 'Email'),
+                text_Field(texthint: 'Email', reference: _justaplaceholder),
                 const SizedBox(
                   height: 5,
                 ),
                 //***************************password text field**************************************
                 text_Field(
+                  reference: _justaplaceholder,
                   texthint: 'Password',
-                  obscure_text: true,
-                ),
-                text_Field(
-                  texthint: 'Re-enter Password',
                   obscure_text: true,
                 ),
                 const SizedBox(

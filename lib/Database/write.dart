@@ -1,4 +1,6 @@
 import 'package:amb_app/constant/routes.dart';
+import 'package:amb_app/custom%20widgets/pressable_buttons.dart';
+import 'package:amb_app/custom%20widgets/text_field.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
@@ -13,12 +15,21 @@ class Write extends StatefulWidget {
 }
 
 class _WriteState extends State<Write> {
-  final database = FirebaseDatabase.instance.ref();
+  final usernameController = TextEditingController();
+  final userController = TextEditingController();
+  final user2Controller = TextEditingController();
+  late DatabaseReference dbref;
   //<databaseRef>.set()
   //set = set a value in your database
+
+  @override
+  void initState() {
+    super.initState();
+    dbref = FirebaseDatabase.instance.ref().child('Drivers');
+  }
+
   @override
   Widget build(BuildContext context) {
-    final dailySpecialRef = database.child('dailyspecial/');
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: true,
@@ -31,35 +42,30 @@ class _WriteState extends State<Write> {
         ),
         title: const Text('Read Examples'),
       ),
-      body: FutureBuilder(
-        future: Firebase.initializeApp(
-          options: DefaultFirebaseOptions.currentPlatform,
-        ),
-        builder: (context, snapshot) {
-          switch (snapshot.connectionState) {
-            case ConnectionState.done:
-              return Column(children: [
-                ElevatedButton(
-                  onPressed: () async {
-                    try {
-                      await dailySpecialRef
-                          .set({'description': 'vanilla latte', 'price': 4.99});
-                      print('written');
-                    } catch (e) {
-                      print('You got error $e');
-                      showErrorDialog(
-                        context,
-                        'Error',
-                      );
-                    }
-                  },
-                  child: const Text('Simple set'),
-                ),
-              ]);
-            default:
-              return const CircularProgressIndicator();
-          }
-        },
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          text_Field(texthint: 'Parent', reference: usernameController),
+          text_Field(
+            texthint: 'Child',
+            reference: user2Controller,
+          ),
+          text_Field(
+            texthint: 'Next child',
+            reference: userController,
+          ),
+          Pressable_Button(
+              onTap: () {
+                Map<String, String> users = {
+                  'name': usernameController.text,
+                  'user2': userController.text,
+                  'user3': user2Controller.text,
+                };
+                dbref.push().set(users);
+                print('Write sucessful');
+              },
+              buttontext: 'Insert'),
+        ],
       ),
     );
   }
