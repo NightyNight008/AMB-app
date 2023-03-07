@@ -11,3 +11,4 @@ const useroptionsroute = "/UserOptions";
 const databaseroute = "/Database";
 const readroute = "/Read";
 const writeroute = "/write";
+const verifyroute = "/verify";

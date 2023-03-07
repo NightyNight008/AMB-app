@@ -53,20 +53,8 @@ class _ProfilePhomeState extends State<ProfilePhome> {
             label: 'Profile',
             backgroundColor: Colors.blue,
           ),
-          // BottomNavigationBarItem(
-          //   icon: Icon(
-          //     Icons.logout,
-          //     color: Colors.grey,
-          //   ),
-          //   label: 'Logout',
-          //   backgroundColor: Colors.blue,
-          // ),
         ],
       ),
     );
   }
 }
-// @override
-// Widget @override
-// Widget build(BuildContext context) => Scaffold(body: IndexedStack(children: screens,),)
-// }

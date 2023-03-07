@@ -14,23 +14,7 @@ class Read extends StatefulWidget {
 
 class _ReadState extends State<Read> {
   Query dbref = FirebaseDatabase.instance.ref().child('Drivers');
-  Widget listitem({required Map Drivers}) {
-    return Container(
-      height: 110,
-      margin: const EdgeInsets.all(10),
-      padding: const EdgeInsets.all(10),
-      color: Colors.amber,
-      child: Column(
-        children: [
-          Text(
-            Drivers['name'],
-          ),
-          Text(Drivers['age']),
-          Text(Drivers['Salary']),
-        ],
-      ),
-    );
-  }
+  final ref = FirebaseDatabase.instance.ref('User');
 
   @override
   Widget build(BuildContext context) {
@@ -46,16 +30,44 @@ class _ReadState extends State<Read> {
         ),
         title: const Text('Write Examples'),
       ),
-      body: Container(
-        child: FirebaseAnimatedList(
-            query: dbref,
-            itemBuilder: (BuildContext context, DataSnapshot snapshot,
-                Animation<double> animation, int index) {
-              Map drivers = snapshot.value as Map;
-              drivers['key'] = snapshot.key;
-
-              return listitem(Drivers: drivers);
-            }),
+      body: Column(
+        children: [
+          Expanded(
+            child: StreamBuilder(
+              stream: ref.onValue,
+              builder: (context, AsyncSnapshot<DatabaseEvent> snapshot) {
+                if (!snapshot.hasData) {
+                  return Center(child: const CircularProgressIndicator());
+                } else {
+                  Map<dynamic, dynamic> map =
+                      snapshot.data!.snapshot.value as dynamic;
+                  List<dynamic> list = [];
+                  list.clear();
+                  list = map.values.toList();
+                  return ListView.builder(
+                    itemCount: snapshot.data!.snapshot.children.length,
+                    itemBuilder: ((context, index) {
+                      return ListTile(
+                        title: Text(list[index]['name']),
+                      );
+                    }),
+                  );
+                }
+              },
+            ),
+          ),
+          // Expanded(
+          //   child: FirebaseAnimatedList(
+          //     query: ref,
+          //     defaultChild: const CircularProgressIndicator(strokeWidth: 10),
+          //     itemBuilder: (context, snapshot, animation, index) {
+          //       return ListTile(
+          //         title: Text(snapshot.child('Name').value.toString()),
+          //       );
+          //     },
+          //   ),
+          // ),
+        ],
       ),
     );
   }

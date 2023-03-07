@@ -15,31 +15,6 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-      // floatingActionButton: Container(
-      //   padding: const EdgeInsets.symmetric(horizontal: 8),
-      //   height: 60,
-      //   width: double.infinity,
-      //   margin: const EdgeInsets.symmetric(
-      //     horizontal: 8,
-      //   ),
-      //   decoration: BoxDecoration(
-      //     borderRadius: BorderRadius.circular(40),
-      //     color: Colors.purple,
-      //   ),
-      //   child: const Text(
-      //     'Login',
-      //     textAlign: TextAlign.center,
-      //   ),
-      // ),
-      // floatingActionButton: FloatingActionButton(
-      //   onPressed: () {
-      //     Navigator.of(context)
-      //         .pushNamedAndRemoveUntil(loginRoute, (route) => false);
-      //   },
-      //   child: const Text('Login'),
-      // ),
-
       backgroundColor: const Color.fromARGB(255, 253, 252, 253),
       body: SafeArea(
         child: Center(
@@ -68,46 +43,17 @@ class _HomePageState extends State<HomePage> {
                         "In case of life threatening incidents,press this button.In case of life threatening incidents,press this buttonIn case of life threatening incidents,press this buttonIn case of life threatening incidents,press this buttonIn case of life threatening incidents,press this button",
                     link: "assets/images/icu.jpg",
                     pressbutton: 'Request'),
-
-                //*****************************************************/
-                //*****************************Login Button On Homepage */
-
-                // Center(
-                //   child: Row(
-                //     mainAxisAlignment: MainAxisAlignment.end,
-                //     children: [
-                //       Pressable_Button(
-                //         onTap: loginRoute,
-                //         buttontext: 'Login',
-                //         horizontalLength: 90,
-                //       ),
-
-                //       const SizedBox(
-                //         width: 10,
-                //       ),
-                //       //****************************Register Button */
-                //       Pressable_Button(
-                //         onTap: register2Route,
-                //         buttontext: 'Register',
-                //         horizontalLength: 90,
-                //       ),
-
-                //       //**********************************************************************/
-                //     ],
-                //   ),
-                // ),
-
-                //REmove this
                 const SizedBox(
                   height: 5,
                 ),
+                //remove this
                 Pressable_Button(
                     onTap: () {
                       Navigator.of(context).pushNamedAndRemoveUntil(
                           databaseroute, (route) => false);
                     },
                     buttontext: 'Database'),
-                // *****till here
+                //till here
                 const SizedBox(
                   height: 65,
                 ),

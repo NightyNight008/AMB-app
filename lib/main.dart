@@ -2,6 +2,7 @@ import 'package:amb_app/Database/database.dart';
 import 'package:amb_app/Database/read.dart';
 import 'package:amb_app/Database/write.dart';
 import 'package:amb_app/constant/routes.dart';
+import 'package:amb_app/role%20test/role-based-login-main/register.dart';
 import 'package:amb_app/views/registerpage_options.dart';
 import 'package:amb_app/views/profilePage.dart';
 import 'package:amb_app/views/home_view.dart';
@@ -11,6 +12,7 @@ import 'package:amb_app/views/user_profileoptions.dart';
 import 'package:amb_app/views/profile_home_navbar.dart';
 import 'package:amb_app/views/register_View.dart';
 import 'package:amb_app/views/register_pageDriver.dart';
+import 'package:amb_app/views/verify_email_view.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
@@ -27,7 +29,7 @@ void main() async {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomePage(),
+      home: const LoginPage(),
       routes: {
         loginRoute: (context) => const LoginPage(),
         registerRoute: (context) => const RegisterPage(),
@@ -41,6 +43,7 @@ void main() async {
         databaseroute: (context) => const Database(),
         readroute: (context) => const Read(),
         writeroute: (context) => const Write(),
+        verifyroute: (context) => const VerifyEmailView(),
       },
     ),
   );

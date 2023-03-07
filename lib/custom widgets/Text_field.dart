@@ -1,7 +1,5 @@
 // ignore_for_file: non_constant_identifier_names, camel_case_types, must_be_immutable
 
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 
 class text_Field extends StatelessWidget {
@@ -15,6 +13,7 @@ class text_Field extends StatelessWidget {
   String texthint;
   bool obscure_text;
   TextEditingController reference;
+  late final bool _validate = false;
 
   @override
   Widget build(BuildContext context) {
@@ -29,8 +28,11 @@ class text_Field extends StatelessWidget {
         child: TextField(
           controller: reference,
           obscureText: obscure_text,
-          decoration:
-              InputDecoration(border: InputBorder.none, hintText: texthint),
+          decoration: InputDecoration(
+            border: InputBorder.none,
+            hintText: texthint,
+            errorText: _validate ? 'Can\'t be empty' : null,
+          ),
         ),
       ),
     );
