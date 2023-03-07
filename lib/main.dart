@@ -2,7 +2,6 @@ import 'package:amb_app/Database/database.dart';
 import 'package:amb_app/Database/read.dart';
 import 'package:amb_app/Database/write.dart';
 import 'package:amb_app/constant/routes.dart';
-import 'package:amb_app/role%20test/role-based-login-main/register.dart';
 import 'package:amb_app/views/registerpage_options.dart';
 import 'package:amb_app/views/profilePage.dart';
 import 'package:amb_app/views/home_view.dart';
